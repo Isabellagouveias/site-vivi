@@ -1,0 +1,170 @@
+/* style.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    overflow-x: hidden;
+  }
+  
+  h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    color: #ef4444;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1.5s ease;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    color: #3b82f6;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    animation: fadeIn 2s ease;
+  }
+  
+  section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .carousel {
+    position: relative;
+    max-width: 600px;
+    height: 400px;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+    height: 400px;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  
+  .buttons {
+    margin-top: 1rem;
+  }
+  
+  button {
+    background-color: #ef4444;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #b91c1c;
+  }
+  
+  .floating-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .heart {
+    position: absolute;
+    color: #ef4444;
+    font-size: 2rem;
+    animation: float 6s linear infinite;
+  }
+  
+  .spotify {
+    margin-top: 2rem;
+    border-radius: 12px;
+  }
+  
+ /* Estilo especial para a cartinha */
+ section:last-of-type {
+    background: #fffaf0;
+    color: #4b2e2e;
+    font-family: 'Dancing Script', cursive;
+    text-align: left;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 2px dashed #d97706;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    white-space: pre-line;
+    font-size: 1.3rem;
+  }
+
+  .assinatura {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    text-align: right;
+    margin-top: 2rem;
+    color: #b45309;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(100vh) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-10vh) scale(0.5);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    .carousel {
+      height: 250px;
+    }
+    .slide {
+      height: 250px;
+    }
+  }
