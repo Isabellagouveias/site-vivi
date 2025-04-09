@@ -7,6 +7,8 @@
   <title>Vitória Rodrigues Castelo Branco</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -17,13 +19,6 @@
 
   <h1>Vitória Rodrigues Castelo Branco</h1>
   <p>Uma menina forte, cheia de vida, alegria e talento 💖</p>
-
-  <iframe class="spotify" style="border-radius:12px"
-    src="https://open.spotify.com/embed/track/0WIv5qV41y6YjjB9V1biuC?utm_source=generator" width="100%" height="152"
-    frameBorder="0" allowfullscreen=""
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-
 
   <section>
     <h2>Sobre a Vitória</h2>
@@ -51,7 +46,7 @@
 
   <section>
     <h2>Favoritos</h2>
-    <p>Churrasco, Doritos, pão de alho</p>
+    <p>Churrasco, camarão, doritos, pão de alho</p>
     <p>Snickers, morango com chocolate</p>
     <p>Filme favorito: A Princesa e o Sapo</p>
   </section>
@@ -72,49 +67,209 @@
     <p>Tem vários talentos: dançar, cantar, cuidar, apresentar trabalhos</p>
   </section>
 
-  <section>
-    <h2>Vivi ❤️‍🩹</h2>
-    Hoje, escrevendo essa carta, meu coração tá cheio de gratidão e orgulho por te ter na minha vida. Você não é só uma
-    amiga, você é uma daquelas pessoas que Deus manda pra gente e que muda tudo, que vira casa, porto seguro, colo e
-    conselho. É até difícil colocar em palavras o tanto que você é especial e o quanto você me ensina — e sim, você me
-    ensina todo santo dia, mesmo sem perceber.
-    Você tem 17 anos, mas sua maturidade vai muito além disso. E é lindo ver como você consegue ser leve e divertida sem
-    perder essa sabedoria que Deus te deu. Quem te conhece de longe, vê só a Vitória sorridente, bailarina de Jesus,
-    dançarina maravilhosa que brilha no altar. Mas quem tem o privilégio de te conhecer de perto, como eu, sabe que você
-    é muito mais.
-    Você é uma menina que carrega o mundo dentro de um coração bom. Que ama servir, que lava carro, arruma quarto, faz
-    churras (e um miojo maravilhoso), que cuida das crianças como a melhor tia, que me aconselha, que me escuta, que me
-    puxa pra realidade quando eu tô viajando. Você é uma amiga de ouro, dessas raras que já quase ninguém tem.
-    E mesmo sendo tudo isso, eu sei que às vezes você se sente uma fraude — e eu quero deixar registrado aqui que você
-    NÃO É. Você é uma menina forte pra caramba, que já passou por tanta coisa que só quem te conhece mesmo sabe. Você
-    aprendeu a sorrir mesmo com dor, e isso é bonito, mas não é uma obrigação sua. Você não tem que ser forte o tempo
-    todo. E eu tô aqui pra segurar sua mão nos dias que você não conseguir ser. Eu conheço a Vitória inteira, a que
-    dança, a que ri, a que serve, e a que chora também. E amo todas elas.
-    Sua alegria é contagiante, sua fé me inspira, seu cuidado com os outros me ensina. Você é exemplo, mesmo achando que
-    não é. Você é daquelas pessoas que chegam num lugar e a atmosfera muda, a paz te acompanha. Sua empatia é natural,
-    seu brilho é diferente. Você nasceu no dia do trabalhador e isso faz todo sentido, porque tudo que você faz, você
-    faz com amor, com dedicação, com vontade.
-    Eu poderia passar horas listando suas qualidades e mesmo assim não seria suficiente. Você é única, Vivi. Eu só quero
-    te lembrar que, não importa quantos anos passem, quantas fases mudem, ou onde a vida leve a gente — eu vou estar
-    aqui. Sua irmã mais velha, sua amiga, sua confidente. Pra te ver casando, pra ser madrinha dos seus filhos, pra rir,
-    pra chorar, pra dançar, pra orar. Porque o que a gente tem não é só amizade, é irmandade.
-    Você é um presente raro de Deus pra minha vida. E hoje, no seu dia, minha oração é que Ele continue te guardando, te
-    guiando, te abençoando e te fazendo feliz de verdade. Porque você merece o mundo inteiro. Te amo muito, minha Vivi
-    ❤️‍🩹🦦.
-    <p class="assinatura">Com amor, Isinha 💗</p>
-  </section>
+  <!-- Botão para abrir o modal -->
+  <button id="toggleSongs">Músicas que marcaram</button>
+
+  <!-- Modal com a lista de músicas -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button id="closeModal" class="close-modal">&times;</button>
+
+
+      <!-- Spinner de carregamento -->
+      <div id="spinner" class="text-center my-3">
+        <div class="spinner-border text-danger" role="status">
+          <span class="visually-hidden">Carregando...</span>
+        </div>
+        <p>Carregando músicas...</p>
+      </div>
+
+
+      <div id="songList" style="display: none;">
+        <ul>
+          <!-- Primeira música: Made for Me -->
+          <li>
+            <iframe class="spotify" style="border-radius:12px"
+              src="https://open.spotify.com/embed/track/0WIv5qV41y6YjjB9V1biuC?utm_source=generator" width="100%"
+              height="152" frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+          </li>
+          <!-- Outras músicas -->
+          <li>
+            <iframe class="spotify" style="border-radius:12px"
+              src="https://open.spotify.com/embed/track/6usohdchdzW9oML7VC4Uhk?si=2425b460476947a3" width="100%"
+              height="152" frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+          </li>
+          <li>
+            <iframe class="spotify" style="border-radius:12px"
+              src="https://open.spotify.com/embed/track/0mZ5GyrHG908lqrHaTw4hi?si=8003fc3f220f4ac8" width="100%"
+              height="152" frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+          </li>
+          <li>
+            <iframe class="spotify" style="border-radius:12px"
+              src="https://open.spotify.com/embed/track/3xkHsmpQCBMytMJNiDf3Ii?si=8863558a6abd47cb" width="100%"
+              height="152" frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+          </li>
+          <li>
+            <iframe class="spotify" style="border-radius:12px"
+              src="https://open.spotify.com/embed/track/4rHZZAmHpZrA3iH5zx8frV?si=089c60d98f074781" width="100%"
+              height="152" frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+          </li>
+          <li>
+            <iframe class="spotify" style="border-radius:12px"
+              src="https://open.spotify.com/embed/track/3XVBdLihbNbxUwZosxcGuJ?si=ea5673285cf14449" width="100%"
+              height="152" frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+          </li>
+          <li>
+            <iframe class="spotify" style="border-radius:12px"
+              src="https://open.spotify.com/embed/track/6hiKXxS7pgPKnKfCU7UJ6O?si=82f5ba09aa2a4c2" width="100%"
+              height="152" frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+          </li>
+          <li>
+            <iframe class="spotify" style="border-radius:12px"
+              src="https://open.spotify.com/embed/track/7JIuqL4ZqkpfGKQhYlrirs?si=c60c1fa45e7f4bb4" width="100%"
+              height="152" frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+          </li>
+          <li>
+            <iframe class="spotify" style="border-radius:12px"
+              src="https://open.spotify.com/embed/track/0GNI8K3VATWBABQFAzBAYe?si=6a34fcc31e184d6d" width="100%"
+              height="152" frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+          </li>
+          <li>
+            <iframe class="spotify" style="border-radius:12px"
+              src="https://open.spotify.com/embed/track/4vl2zwXsTmAxgu9iY0g6UK?si=59033eb9df634806" width="100%"
+              height="152" frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+          </li>
+          <li>
+            <iframe class="spotify" style="border-radius:12px"
+              src="https://open.spotify.com/embed/track/4nVBt6MZDDP6tRVdQTgxJg?si=1743f47dd0694ec0" width="100%"
+              height="152" frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+          </li>
+          <li>
+            <iframe class="spotify" style="border-radius:12px"
+              src="https://open.spotify.com/embed/track/0DwClY2t9YAWHBROMIgrXb?si=52868100731c4016" width="100%"
+              height="152" frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+          </li>
+          <li>
+            <iframe class="spotify" style="border-radius:12px"
+              src="https://open.spotify.com/embed/track/5l6hpyTGBK0LAAxgPnqTQL?si=a6850121ff0143b5" width="100%"
+              height="152" frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+          </li>
+          <li>
+            <iframe class="spotify" style="border-radius:12px"
+              src="https://open.spotify.com/embed/track/2tpWsVSb9UEmDRxAl1zhX1?si=50ae0af1f3f54b0f" width="100%"
+              height="152" frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+          </li>
+          <li>
+            <iframe class="spotify" style="border-radius:12px"
+              src="https://open.spotify.com/embed/track/3AJwUDP919kvQ9QcozQPxg?si=bfc9bbfc250b4ef8" width="100%"
+              height="152" frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+          </li>
+          <li>
+            <iframe class="spotify" style="border-radius:12px"
+              src="https://open.spotify.com/embed/track/65gLJGey4u4KFFqoC5fzFJ?si=d94586baeea64398" width="100%"
+              height="152" frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+          </li>
+          <li>
+            <iframe class="spotify" style="border-radius:12px"
+              src="https://open.spotify.com/embed/track/5fVZC9GiM4e8vu99W0Xf6J?si=178510f2f7fd4cd0" width="100%"
+              height="152" frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
   <div class="carousel">
     <div class="slides" id="slides">
-      <div class="slide"><img src="https://placekitten.com/600/400" alt="Imagem 1"></div>
-      <div class="slide"><img src="https://placekitten.com/600/400" alt="Imagem 2"></div>
-      <div class="slide"><img src="https://placekitten.com/600/400" alt="Imagem 3"></div>
+      <div class="slide"><img src="./assets/img/vivi-1.jpg" alt="Imagem 1"></div>
+      <div class="slide"><img src="./assets/img/vivi-2.jpg" alt="Imagem 2"></div>
+      <div class="slide"><img src="./assets/img/vivi-3.jpg" alt="Imagem 3"></div>
+      <div class="slide"><img src="./assets/img/vivi-4.jpg" alt="Imagem 4"></div>
+      <div class="slide"><img src="./assets/img/vivi-5.jpg" alt="Imagem 5"></div>
+      <div class="slide"><img src="./assets/img/vivi-6.jpg" alt="Imagem 6"></div>
+      <div class="slide"><img src="./assets/img/vivi-7.jpg" alt="Imagem 7"></div>
+      <div class="slide"><img src="./assets/img/vivi-8.jpg" alt="Imagem 8"></div>
+      <div class="slide"><img src="./assets/img/vivi-9.jpg" alt="Imagem 9"></div>
+      <div class="slide"><img src="./assets/img/vivi-10.jpg" alt="Imagem 10"></div>
+      <div class="slide"><img src="./assets/img/vivi-11.jpg" alt="Imagem 11"></div>
+      <div class="slide"><img src="./assets/img/vivi-12.jpg" alt="Imagem 12"></div>
+      <div class="slide"><img src="./assets/img/vivi-13.jpg" alt="Imagem 13"></div>
+      <div class="slide"><img src="./assets/img/vivi-14.jpg" alt="Imagem 14"></div>
+      <div class="slide"><img src="./assets/img/vivi-15.jpg" alt="Imagem 15"></div>
+      <div class="slide"><img src="./assets/img/vivi-16.jpg" alt="Imagem 16"></div>
+      <div class="slide"><img src="./assets/img/vivi-17.jpg" alt="Imagem 17"></div>
+      <div class="slide"><img src="./assets/img/vivi-18.jpg" alt="Imagem 18"></div>
+      <div class="slide"><img src="./assets/img/vivi-19.jpg" alt="Imagem 19"></div>
+      <div class="slide"><img src="./assets/img/vivi-20.jpg" alt="Imagem 20"></div>
+      <div class="slide"><img src="./assets/img/vivi-21.jpg" alt="Imagem 21"></div>
+      <div class="slide"><img src="./assets/img/vivi-22.jpg" alt="Imagem 22"></div>
+      <div class="slide"><img src="./assets/img/vivi-23.jpg" alt="Imagem 23"></div>
+      <div class="slide"><img src="./assets/img/vivi-24.jpg" alt="Imagem 24"></div>
+      <div class="slide"><img src="./assets/img/vivi-25.jpg" alt="Imagem 25"></div>
+      <div class="slide"><img src="./assets/img/vivi-26.jpg" alt="Imagem 26"></div>
+      <div class="slide"><img src="./assets/img/vivi-27.jpg" alt="Imagem 27"></div>
+      <div class="slide"><img src="./assets/img/vivi-28.jpg" alt="Imagem 28"></div>
+      <div class="slide"><img src="./assets/img/vivi-28.jpg" alt="Imagem 28"></div>
+
+      <div class="slide"><img src="./assets/img/irma.jpg" alt="Imagem 28"></div>
+      <div class="slide"><img src="./assets/img/irma-2.jpg" alt="Imagem 28"></div>
+      <div class="slide"><img src="./assets/img/irma-3.jpg" alt="Imagem 28"></div>
+
+      <div class="slide"><img src="./assets/img/infancia.jpg" alt="Imagem 28"></div>
+      <div class="slide"><img src="./assets/img/infancia-2.jpg" alt="Imagem 28"></div>
+
+      <div class="slide"><img src="./assets/img/best.jpg" alt="Imagem 28"></div>
+      <div class="slide"><img src="./assets/img/best-2.jpg" alt="Imagem 28"></div>
+      <div class="slide"><img src="./assets/img/best-3.jpg" alt="Imagem 28"></div>
+      <div class="slide"><img src="./assets/img/best-4.jpg" alt="Imagem 28"></div>
+      <div class="slide"><img src="./assets/img/best-5.jpg" alt="Imagem 28"></div>
+      <div class="slide"><img src="./assets/img/best-6.jpg" alt="Imagem 28"></div>
+      <div class="slide"><img src="./assets/img/best-7.jpg" alt="Imagem 28"></div>
+      <div class="slide"><img src="./assets/img/best-8.jpg" alt="Imagem 28"></div>
+
+
     </div>
   </div>
   <div class="buttons">
     <button onclick="prevSlide()">⬅️</button>
     <button onclick="nextSlide()">➡️</button>
   </div>
+
+
 
 
   <script src="script.js"></script>
