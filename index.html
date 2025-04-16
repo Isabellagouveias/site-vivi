@@ -1,278 +1,726 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vitória Rodrigues Castelo Branco</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/olhos.jpeg" sizes="16x16"/>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vitória Rodrigues Castelo Branco</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <body>
+    <div class="princess-decorations">
+      <img src="./assets/img/moana.png" alt="Moana" class="princess moana" />
+      
+    </div>
 
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
+    <section class="rainha-do-dia">
+      <img
+        src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3FjM29ucDFxNGo3d3ZveWF2dWN3cTNqem9qYWNoNHdvZWw5dG9kMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/chiLaouf8KefD7UpQh/giphy.gif"
+        alt="Coroa brilhando"
+        class="coroa-gif"
+      />
 
-<body>
-  <div class="floating-hearts" id="hearts"></div>
+      <h1>Vitória Rodrigues Castelo Branco</h1>
+      <p>Menina forte, cheia de vida, alegria e talento 💖</p>
 
-  <h1>Vitória Rodrigues Castelo Branco</h1>
-  <p>Uma menina forte, cheia de vida, alegria e talento 💖</p>
+      <p>
+        Vitória é tipo se a Moana e a Tiana tivessem uma filha.
+        <span class="highlight">Determinação</span> +
+        <span class="highlight">elegância</span> = ela!
+      </p>
+    </section>
 
-  <section>
-    <h2>Sobre a Vitória</h2>
-    <p>Nasceu de madrugada em 1º de maio de 2008</p>
-    <p>Hospital Materno Infantil</p>
-    <p>Vitória já é muito madura, ainda mais pra 17 anos</p>
-  </section>
+    <section class="sparkle-buttons">
+      <button onclick="mostrarElogioAleatorio()">Me define 💫</button>
+    </section>
 
-  <section>
-    <h2>Caracteristicas e adjetivos</h2>
-    <p>Boa filha, irmã, amiga</p>
-    <p>Trabalhadeira, dedicada em tudo que faz</p>
-    <p>Gentil, sorridente, engraçada, forte</p>
-  </section>
+    <div
+      id="toastArea"
+      class="toast-container position-fixed bottom-0 end-0 p-3"
+      style="z-index: 9999"
+    ></div>
 
+    <div class="floating-hearts" id="hearts"></div>
 
-  <section>
-    <h2>Coisas que ela ama</h2>
-    <p>Ler, dançar, sair</p>
-    <p>Maquiar, organizar, cuidar</p>
-    <p>Física é sua matéria favorita, já química a que menos gosta</p>
-    <p>Dar conselhos e ouvir os outros</p>
-    <p>Ser bailarina de Jesus</p>
-  </section>
+    <section>
+      <h2>Sobre a Vitória</h2>
+      <p>Nasceu de madrugada em 1º de maio de 2008</p>
+      <p>Hospital Materno Infantil</p>
+      <p>Vitória já é muito madura, ainda mais pra 17 anos</p>
+    </section>
 
-  <section>
-    <h2>Favoritos</h2>
-    <p>Churrasco, camarão, doritos, pão de alho</p>
-    <p>Snickers, morango com chocolate</p>
-    <p>Filme favorito: A Princesa e o Sapo</p>
-  </section>
+    <section>
+      <h2>Características e adjetivos</h2>
+      <p>Boa filha, irmã, amiga</p>
+      <p>Trabalhadeira, dedicada em tudo que faz</p>
+      <p>Gentil, sorridente, engraçada, forte</p>
+    </section>
 
-  <section>
-    <h2>Medos e Manias</h2>
-    <p>Medo de palhaço, filmes de terror, bonecas, patos, aranhas</p>
-    <p>Quando criança, medo do escuro</p>
-    <p>Tem mania de falar "não me irrita não"</p>
-    <p>Não sabe falar "intuito" 😂</p>
-  </section>
+    <section>
+      <h2>Coisas que ela ama</h2>
+      <p>Ler, dançar, sair</p>
+      <p>Maquiar, organizar, cuidar</p>
+      <p>Física é sua matéria favorita, já química a que menos gosta</p>
+      <p>Dar conselhos e ouvir os outros</p>
+      <p class="highlight">Ser bailarina de Jesus ✨</p>
+    </section>
 
-  <section>
-    <h2>Sonhos e Talentos</h2>
-    <p>Sonhava em fazer ginástica</p>
-    <p>Sonha em morar no Residencial Opus Acqua</p>
-    <p>Miojo e churros sensacional</p>
-    <p>Tem vários talentos: dançar, cantar, cuidar, apresentar trabalhos</p>
-  </section>
+    <section class="favorite">
+      <h2>Favoritos</h2>
+      <p>Churrasco, camarão, doritos, pão de alho</p>
+      <p>Snickers, morango com chocolate</p>
+      <p>Filme favorito: A Princesa e o Sapo</p>
+    </section>
 
-  <!-- Botão para abrir o modal -->
-  <button id="toggleSongs">Músicas que marcaram</button>
+    <section>
+      <h2>Medos e Manias</h2>
+      <p>Medo de palhaço, filmes de terror, bonecas, patos, aranhas</p>
+      <p>Quando criança, medo do escuro</p>
+      <p>Tem mania de falar "não me irrita não"</p>
+      <p>Não sabe falar "intuito" 😂</p>
+    </section>
 
-  <!-- Modal com a lista de músicas -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <button id="closeModal" class="close-modal">&times;</button>
+    <section>
+      <h2>Sonhos e Talentos</h2>
+      <p>Sonhava em fazer ginástica</p>
+      <p>Sonha em morar no Residencial Opus Acqua</p>
+      <p>Miojo e churros sensacional</p>
+      <p>Tem vários talentos: dançar, cantar, cuidar, apresentar trabalhos</p>
+    </section>
 
+    <!-- Botão para abrir o modal -->
+    <button id="toggleSongs">Músicas que marcaram</button>
 
-      <!-- Spinner de carregamento -->
-      <div id="spinner" class="text-center my-3">
-        <div class="spinner-border text-danger" role="status">
-          <span class="visually-hidden">Carregando...</span>
+    <!-- Modal com a lista de músicas -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <button id="closeModal" class="close-modal">&times;</button>
+
+        <!-- Spinner de carregamento -->
+        <div id="spinner" class="text-center my-3">
+          <div class="spinner-border text-danger" role="status">
+            <span class="visually-hidden">Carregando...</span>
+          </div>
+          <p>Carregando músicas...</p>
         </div>
-        <p>Carregando músicas...</p>
-      </div>
 
+        <div id="songList" style="display: none">
+          <ul>
+            <!-- Primeira música: Made for Me -->
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/0WIv5qV41y6YjjB9V1biuC?utm_source=generator"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              >
+              </iframe>
+            </li>
+            <!-- Outras músicas -->
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/6usohdchdzW9oML7VC4Uhk?si=2425b460476947a3"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              >
+              </iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/0GjEhVFGZW8afUYGChu3Rr?si=db7b9f2837eb42f4"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              >
+              </iframe>
+            </li>
 
-      <div id="songList" style="display: none;">
-        <ul>
-          <!-- Primeira música: Made for Me -->
-          <li>
-            <iframe class="spotify" style="border-radius:12px"
-              src="https://open.spotify.com/embed/track/0WIv5qV41y6YjjB9V1biuC?utm_source=generator" width="100%"
-              height="152" frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
-          </li>
-          <!-- Outras músicas -->
-          <li>
-            <iframe class="spotify" style="border-radius:12px"
-              src="https://open.spotify.com/embed/track/6usohdchdzW9oML7VC4Uhk?si=2425b460476947a3" width="100%"
-              height="152" frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
-          </li>
-          <li>
-            <iframe class="spotify" style="border-radius:12px"
-              src="https://open.spotify.com/embed/track/0mZ5GyrHG908lqrHaTw4hi?si=8003fc3f220f4ac8" width="100%"
-              height="152" frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
-          </li>
-          <li>
-            <iframe class="spotify" style="border-radius:12px"
-              src="https://open.spotify.com/embed/track/3xkHsmpQCBMytMJNiDf3Ii?si=8863558a6abd47cb" width="100%"
-              height="152" frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
-          </li>
-          <li>
-            <iframe class="spotify" style="border-radius:12px"
-              src="https://open.spotify.com/embed/track/4rHZZAmHpZrA3iH5zx8frV?si=089c60d98f074781" width="100%"
-              height="152" frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
-          </li>
-          <li>
-            <iframe class="spotify" style="border-radius:12px"
-              src="https://open.spotify.com/embed/track/3XVBdLihbNbxUwZosxcGuJ?si=ea5673285cf14449" width="100%"
-              height="152" frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
-          </li>
-          <li>
-            <iframe class="spotify" style="border-radius:12px"
-              src="https://open.spotify.com/embed/track/6hiKXxS7pgPKnKfCU7UJ6O?si=82f5ba09aa2a4c2" width="100%"
-              height="152" frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
-          </li>
-          <li>
-            <iframe class="spotify" style="border-radius:12px"
-              src="https://open.spotify.com/embed/track/7JIuqL4ZqkpfGKQhYlrirs?si=c60c1fa45e7f4bb4" width="100%"
-              height="152" frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
-          </li>
-          <li>
-            <iframe class="spotify" style="border-radius:12px"
-              src="https://open.spotify.com/embed/track/0GNI8K3VATWBABQFAzBAYe?si=6a34fcc31e184d6d" width="100%"
-              height="152" frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
-          </li>
-          <li>
-            <iframe class="spotify" style="border-radius:12px"
-              src="https://open.spotify.com/embed/track/4vl2zwXsTmAxgu9iY0g6UK?si=59033eb9df634806" width="100%"
-              height="152" frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
-          </li>
-          <li>
-            <iframe class="spotify" style="border-radius:12px"
-              src="https://open.spotify.com/embed/track/4nVBt6MZDDP6tRVdQTgxJg?si=1743f47dd0694ec0" width="100%"
-              height="152" frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
-          </li>
-          <li>
-            <iframe class="spotify" style="border-radius:12px"
-              src="https://open.spotify.com/embed/track/0DwClY2t9YAWHBROMIgrXb?si=52868100731c4016" width="100%"
-              height="152" frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
-          </li>
-          <li>
-            <iframe class="spotify" style="border-radius:12px"
-              src="https://open.spotify.com/embed/track/5l6hpyTGBK0LAAxgPnqTQL?si=a6850121ff0143b5" width="100%"
-              height="152" frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
-          </li>
-          <li>
-            <iframe class="spotify" style="border-radius:12px"
-              src="https://open.spotify.com/embed/track/2tpWsVSb9UEmDRxAl1zhX1?si=50ae0af1f3f54b0f" width="100%"
-              height="152" frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
-          </li>
-          <li>
-            <iframe class="spotify" style="border-radius:12px"
-              src="https://open.spotify.com/embed/track/3AJwUDP919kvQ9QcozQPxg?si=bfc9bbfc250b4ef8" width="100%"
-              height="152" frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
-          </li>
-          <li>
-            <iframe class="spotify" style="border-radius:12px"
-              src="https://open.spotify.com/embed/track/65gLJGey4u4KFFqoC5fzFJ?si=d94586baeea64398" width="100%"
-              height="152" frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
-          </li>
-          <li>
-            <iframe class="spotify" style="border-radius:12px"
-              src="https://open.spotify.com/embed/track/5fVZC9GiM4e8vu99W0Xf6J?si=178510f2f7fd4cd0" width="100%"
-              height="152" frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
-          </li>
-        </ul>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/0mZ5GyrHG908lqrHaTw4hi?si=8003fc3f220f4ac8"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              >
+              </iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/3xkHsmpQCBMytMJNiDf3Ii?si=8863558a6abd47cb"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              >
+              </iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/4rHZZAmHpZrA3iH5zx8frV?si=089c60d98f074781"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              >
+              </iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/3XVBdLihbNbxUwZosxcGuJ?si=ea5673285cf14449"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              >
+              </iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/6hiKXxS7pgPKnKfCU7UJ6O?si=82f5ba09aa2a4c2"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              >
+              </iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/7JIuqL4ZqkpfGKQhYlrirs?si=c60c1fa45e7f4bb4"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              >
+              </iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/0GNI8K3VATWBABQFAzBAYe?si=6a34fcc31e184d6d"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              >
+              </iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/4vl2zwXsTmAxgu9iY0g6UK?si=59033eb9df634806"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              >
+              </iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/4nVBt6MZDDP6tRVdQTgxJg?si=1743f47dd0694ec0"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              >
+              </iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/0DwClY2t9YAWHBROMIgrXb?si=52868100731c4016"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              >
+              </iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/5l6hpyTGBK0LAAxgPnqTQL?si=a6850121ff0143b5"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              >
+              </iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/2tpWsVSb9UEmDRxAl1zhX1?si=50ae0af1f3f54b0f"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              >
+              </iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/3AJwUDP919kvQ9QcozQPxg?si=bfc9bbfc250b4ef8"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              >
+              </iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/65gLJGey4u4KFFqoC5fzFJ?si=d94586baeea64398"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              >
+              </iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/5fVZC9GiM4e8vu99W0Xf6J?si=178510f2f7fd4cd0"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              >
+              </iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/0NBgyml7T0IvUNbXIkcSpH?utm_source=generator"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/4HlFJV71xXKIGcU3kRyttv?utm_source=generator"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/6RtPijgfPKROxEzTHNRiDp?utm_source=generator"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/15tHagkk8z306XkyOHqiip?utm_source=generator"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/4lzOb7A0xfdcYtV7YVr4Aa?utm_source=generator"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/5e3UWcbvTaF5CJWu81MqlQ?utm_source=generator"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/7CMIy0uwXyeBv2MvaEUJM1?utm_source=generator"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/5J5BHiH0lJixs0sqshuEGW?utm_source=generator"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/3A1o7yTEG19nk7GCJiovcT?utm_source=generator"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/3i8fIJNV0yuC4kXT3SkVBZ?utm_source=generator"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/6dgWWAs5yhWPOtvE1zuoQ1?utm_source=generator"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/78KHqNIsDzfNhoEpmTECoB?utm_source=generator"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/0edfc3t992Gzwlpk4AFGKY?utm_source=generator"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/1GKjj26uasFDUphJN8OODs?utm_source=generator"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/2cvI1IUFrtdcd6nUN1EZyw?utm_source=generator"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </li>
+            <li>
+              <iframe
+                class="spotify"
+                src="https://open.spotify.com/embed/track/1CJmhl3D2xcWhEC4nTslPD?utm_source=generator"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="carousel">
-    <div class="slides" id="slides">
-      <div class="slide"><img src="./assets/img/vivi-1.jpg" alt="Imagem 1"></div>
-      <div class="slide"><img src="./assets/img/vivi-2.jpg" alt="Imagem 2"></div>
-      <div class="slide"><img src="./assets/img/vivi-3.jpg" alt="Imagem 3"></div>
-      <div class="slide"><img src="./assets/img/vivi-4.jpg" alt="Imagem 4"></div>
-      <div class="slide"><img src="./assets/img/vivi-5.jpg" alt="Imagem 5"></div>
-      <div class="slide"><img src="./assets/img/vivi-6.jpg" alt="Imagem 6"></div>
-      <div class="slide"><img src="./assets/img/vivi-7.jpg" alt="Imagem 7"></div>
-      <div class="slide"><img src="./assets/img/vivi-8.jpg" alt="Imagem 8"></div>
-      <div class="slide"><img src="./assets/img/vivi-9.jpg" alt="Imagem 9"></div>
-      <div class="slide"><img src="./assets/img/vivi-10.jpg" alt="Imagem 10"></div>
-      <div class="slide"><img src="./assets/img/vivi-11.jpg" alt="Imagem 11"></div>
-      <div class="slide"><img src="./assets/img/vivi-12.jpg" alt="Imagem 12"></div>
-      <div class="slide"><img src="./assets/img/vivi-13.jpg" alt="Imagem 13"></div>
-      <div class="slide"><img src="./assets/img/vivi-14.jpg" alt="Imagem 14"></div>
-      <div class="slide"><img src="./assets/img/vivi-15.jpg" alt="Imagem 15"></div>
-      <div class="slide"><img src="./assets/img/vivi-16.jpg" alt="Imagem 16"></div>
-      <div class="slide"><img src="./assets/img/vivi-17.jpg" alt="Imagem 17"></div>
-      <div class="slide"><img src="./assets/img/vivi-18.jpg" alt="Imagem 18"></div>
-      <div class="slide"><img src="./assets/img/vivi-19.jpg" alt="Imagem 19"></div>
-      <div class="slide"><img src="./assets/img/vivi-20.jpg" alt="Imagem 20"></div>
-      <div class="slide"><img src="./assets/img/vivi-21.jpg" alt="Imagem 21"></div>
-      <div class="slide"><img src="./assets/img/vivi-22.jpg" alt="Imagem 22"></div>
-      <div class="slide"><img src="./assets/img/vivi-23.jpg" alt="Imagem 23"></div>
-      <div class="slide"><img src="./assets/img/vivi-24.jpg" alt="Imagem 24"></div>
-      <div class="slide"><img src="./assets/img/vivi-25.jpg" alt="Imagem 25"></div>
-      <div class="slide"><img src="./assets/img/vivi-26.jpg" alt="Imagem 26"></div>
-      <div class="slide"><img src="./assets/img/vivi-27.jpg" alt="Imagem 27"></div>
-      <div class="slide"><img src="./assets/img/vivi-28.jpg" alt="Imagem 28"></div>
-      <div class="slide"><img src="./assets/img/vivi-28.jpg" alt="Imagem 28"></div>
+    <div class="carousel">
+      <div class="slides" id="slides">
+        <div class="slide">
+          <img src="./assets/img/vivi-1.jpg" alt="Imagem 1" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-2.jpg" alt="Imagem 2" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-3.jpg" alt="Imagem 3" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-4.jpg" alt="Imagem 4" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-5.jpg" alt="Imagem 5" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-6.jpg" alt="Imagem 6" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-7.jpg" alt="Imagem 7" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-8.jpg" alt="Imagem 8" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-9.jpg" alt="Imagem 9" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-10.jpg" alt="Imagem 10" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-11.jpg" alt="Imagem 11" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-12.jpg" alt="Imagem 12" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-13.jpg" alt="Imagem 13" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-14.jpg" alt="Imagem 14" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-15.jpg" alt="Imagem 15" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-16.jpg" alt="Imagem 16" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-17.jpg" alt="Imagem 17" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-18.jpg" alt="Imagem 18" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-19.jpg" alt="Imagem 19" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-20.jpg" alt="Imagem 20" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-21.jpg" alt="Imagem 21" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-22.jpg" alt="Imagem 22" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-23.jpg" alt="Imagem 23" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-24.jpg" alt="Imagem 24" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-25.jpg" alt="Imagem 25" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-26.jpg" alt="Imagem 26" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-27.jpg" alt="Imagem 27" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-28.jpg" alt="Imagem 28" />
+        </div>
 
-      <div class="slide"><img src="./assets/img/irma.jpg" alt="Imagem 28"></div>
-      <div class="slide"><img src="./assets/img/irma-2.jpg" alt="Imagem 28"></div>
-      <div class="slide"><img src="./assets/img/irma-3.jpg" alt="Imagem 28"></div>
+        <div class="slide">
+          <img src="./assets/img/vivi-29.jpeg" alt="Imagem 29" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-30.jpeg" alt="Imagem 30" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-31.jpeg" alt="Imagem 31" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-32.jpeg" alt="Imagem 32" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-33.jpeg" alt="Imagem 33" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-34.jpeg" alt="Imagem 34" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-35.jpeg" alt="Imagem 35" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-36.jpeg" alt="Imagem 36" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-37.jpeg" alt="Imagem 37" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/vivi-38.jpeg" alt="Imagem 38" />
+        </div>
 
-      <div class="slide"><img src="./assets/img/infancia.jpg" alt="Imagem 28"></div>
-      <div class="slide"><img src="./assets/img/infancia-2.jpg" alt="Imagem 28"></div>
+        <div class="slide">
+          <img src="./assets/img/irma.jpg" alt="Imagem irma" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/irma-2.jpg" alt="Imagem irma" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/irma-3.jpg" alt="Imagem irma" />
+        </div>
 
-      <div class="slide"><img src="./assets/img/best.jpg" alt="Imagem 28"></div>
-      <div class="slide"><img src="./assets/img/best-2.jpg" alt="Imagem 28"></div>
-      <div class="slide"><img src="./assets/img/best-3.jpg" alt="Imagem 28"></div>
-      <div class="slide"><img src="./assets/img/best-4.jpg" alt="Imagem 28"></div>
-      <div class="slide"><img src="./assets/img/best-5.jpg" alt="Imagem 28"></div>
-      <div class="slide"><img src="./assets/img/best-6.jpg" alt="Imagem 28"></div>
-      <div class="slide"><img src="./assets/img/best-7.jpg" alt="Imagem 28"></div>
-      <div class="slide"><img src="./assets/img/best-8.jpg" alt="Imagem 28"></div>
+        <div class="slide">
+          <img src="./assets/img/infancia.jpg" alt="Imagem infancia" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/infancia-2.jpg" alt="Imagem infancia" />
+        </div>
 
+        <div class="slide">
+          <img src="./assets/img/best.jpg" alt="Imagem best jpg" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-2.jpg" alt="Imagem best jpg" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-3.jpg" alt="Imagem best jpg" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-4.jpg" alt="Imagem best jpg" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-5.jpg" alt="Imagem best jpg" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-6.jpg" alt="Imagem best jpg" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-7.jpg" alt="Imagem best jpg" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-8.jpg" alt="Imagem best jpg" />
+        </div>
 
+        <div class="slide">
+          <img src="./assets/img/best.jpeg" alt="Imagem best jpeg" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-2.jpeg" alt="Imagem best jpeg" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-3.jpeg" alt="Imagem best jpeg" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-9.jpg" alt="Imagem best jpeg" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-10.jpeg" alt="Imagem best jpeg" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-11.jpeg" alt="Imagem best jpeg" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-12.jpeg" alt="Imagem best jpeg" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-13.jpeg" alt="Imagem best jpeg" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-14.jpeg" alt="Imagem best jpeg" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-15.jpeg" alt="Imagem best jpeg" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-16.jpeg" alt="Imagem best jpeg" />
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="buttons">
-    <button onclick="prevSlide()">⬅️</button>
-    <button onclick="nextSlide()">➡️</button>
-  </div>
+    <div class="buttons">
+      <button onclick="prevSlide()" aria-label="Slide anterior">
+        <i class="ph ph-arrow-left"></i>
+      </button>
+      <button onclick="nextSlide()" aria-label="Próximo slide">
+        <i class="ph ph-arrow-right"></i>
+      </button>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
 
-
-
-  <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

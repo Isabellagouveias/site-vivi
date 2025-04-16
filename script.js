@@ -1,3 +1,47 @@
+const elogios = [
+  "Linda 😍", "Forte 💪", "Inteligente 🤓", "Dedicada 👩‍💻", "Amada ❤️", "Gentil 🤗", "Sorridente 😊",
+  "Humilde 🙏", "Honesta ✅", "Talentosa 🎨", "Brilhante ✨", "Corajosa 🦸‍♀️", "Generosa 🤝",
+  "Empática 🫂", "Criativa 🎭", "Carinhosa 💕", "Inspiradora 🌟", "Autêntica 💎", "Amável 😌",
+  "Elegante 👗", "Resiliente 🛡", "Cheia de luz 🔆", "Determinada 🏆", "Fofa demais 🥰",
+  "Radiante 🌈", "Magnífica 👑", "Encantadora 🌹", "Única 🎀", "Estonteante ✨", "Maravilhosa 💖",
+  "Maravilhosamente incrível 🤩", "Incrível em tudo 😘", "Pura energia positiva ☀️", "Sempre brilhando 🌟"
+];
+
+function mostrarElogioAleatorio() {
+  console.log('mostrarElogioAleatorio acionado');
+  const mensagem = elogios[Math.floor(Math.random() * elogios.length)];
+  const toastArea = document.getElementById('toastArea');
+
+  // Cria o elemento do Toast
+  const toastElement = document.createElement('div');
+  toastElement.className = 'toast align-items-center text-white bg-pink border-0 fade show';
+  toastElement.setAttribute('role', 'alert');
+  toastElement.setAttribute('aria-live', 'assertive');
+  toastElement.setAttribute('aria-atomic', 'true');
+  toastElement.style.minWidth = '220px';
+
+  toastElement.innerHTML = `
+    <div class="d-flex">
+      <div class="toast-body">${mensagem}</div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Fechar"></button>
+    </div>
+  `;
+
+  // Adiciona o toast à área
+  toastArea.appendChild(toastElement);
+
+  // Instancia e mostra o toast com o Bootstrap
+  const toastBootstrap = new bootstrap.Toast(toastElement);
+  toastBootstrap.show();
+
+  // Remove o toast após 8 segundos
+  setTimeout(() => {
+    toastBootstrap.hide();
+    setTimeout(() => toastElement.remove(), 500);
+  }, 8000);
+}
+
+
 let currentIndex = 0;
 const slides = document.getElementById('slides');
 const totalSlides = slides.children.length;
@@ -74,3 +118,25 @@ window.addEventListener('click', function(e) {
     modal.classList.remove('show');
   }
 });
+
+// Exemplo básico de lazy load (só ideia, precisa adaptar ao seu HTML)
+const iframes = document.querySelectorAll('iframe.spotify');
+let loaded = 0;
+const limit = 5;
+
+function loadNextBatch() {
+  for (let i = loaded; i < loaded + limit && i < iframes.length; i++) {
+    iframes[i].src = iframes[i].dataset.src;
+  }
+  loaded += limit;
+}
+
+// Armazena os src reais em data-src
+iframes.forEach((iframe) => {
+  iframe.dataset.src = iframe.src;
+  iframe.removeAttribute('src');
+});
+
+loadNextBatch(); // carrega os primeiros
+
+document.getElementById('verMais').addEventListener('click', loadNextBatch);
