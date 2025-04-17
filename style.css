@@ -376,4 +376,129 @@ button:hover {
   .slide {
     height: 320px;
   }
+}.videos-por-ano {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.video-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.video-buttons button {
+  background: #60a5fa; /* Azul mais claro */
+  border-radius: 16px;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem; /* Menor padding */
+  font-size: 1.2rem; /* Texto menor */
+  color: #fff;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: none; /* Removido o box-shadow para um visual mais discreto */
+  white-space: nowrap; /* Evita que o texto quebre */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Exibe reticências se o texto for muito longo */
+}
+
+.video-buttons button:hover {
+  background: #3b82f6; /* Azul mais intenso */
+  border-color: #2563eb; /* Azul escuro no hover */
+  transform: scale(1.05); /* Efeito de hover mais leve */
+}
+
+.video-buttons button:active {
+  transform: scale(1); /* Retorna ao tamanho original quando clicado */
+}
+
+.video-container {
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+}
+
+@media (max-width: 768px) {
+  .video-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* Maior espaço entre os botões em telas pequenas */
+  }
+
+  .video-buttons button {
+    width: 100%;
+    font-size: 1.4rem; /* Ajuste leve para o texto no mobile */
+    padding: 1rem 0; /* Ajuste para o padding no mobile */
+    white-space: normal; /* Permite quebra de linha, se necessário, no mobile */
+  }
+
+  .video-container {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-top: 1rem; /* Pequeno espaço superior no mobile */
+  }
+}
+
+
+/* */
+
+/* Estilo para as imagens em linha */
+.image-gallery {
+  display: flex;
+  justify-content: center; /* Centraliza as imagens */
+  gap: 1.2rem; /* Espaçamento entre as imagens */
+  margin-top: 1.6rem;
+}
+
+.image-gallery img {
+  width: 120px; /* Tamanho fixo para as imagens */
+  height: 120px; /* Tamanho fixo para as imagens */
+  object-fit: cover; /* Garante que as imagens sejam cortadas corretamente */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para dar um efeito visual */
+  transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
+}
+
+.image-gallery img:hover {
+  transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+}
+
+/* Estilo do link (botão) da playlist */
+.spotify-button {
+  display: inline-block;
+  background-color: #1DB954; /* Cor típica do Spotify */
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+  transition: all 0.3s ease;
+}
+
+.spotify-button:hover {
+  background-color: #1ED760; /* Cor mais clara do Spotify para hover */
+  transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+.spotify-button:active {
+  transform: scale(1); /* Retorna ao tamanho original quando clicado */
 }
