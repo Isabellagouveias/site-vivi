@@ -104,3 +104,25 @@ setInterval(createHearts, 500);
 
 
 
+const videoButtons = document.querySelectorAll(".video-buttons button");
+const videoPlayer = document.getElementById("video-player");
+const videoSource = videoPlayer.querySelector("source");
+
+const videoMap = {
+  "2021": "/assets/video/video-2021-2022.mp4",
+  "2023": "/assets/video/video-2023.mp4",
+  "2024": "/assets/video/video-2024.mp4",
+  "2025": "/assets/video/video-2025.mp4",
+};
+
+videoButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const year = button.getAttribute("data-year");
+    const newSrc = videoMap[year];
+
+    if (newSrc) {
+      videoSource.setAttribute("src", newSrc);
+      videoPlayer.load();
+    }
+  });
+});
