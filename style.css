@@ -208,19 +208,30 @@ section.favorite {
   margin-top: 1rem;
 }
 
+.rainha-do-dia .img-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; 
+  flex-wrap: wrap; 
+}
+
 .rainha-do-dia .foto-vivi {
   width: 180px;
   height: auto;
-  margin: 1rem auto 0.5rem auto;
+  margin: 1rem;
   display: block;
   border-radius: 16px;
-  /* leve arredondado nas pontas */
 }
 
 /* Responsivo para telas menores */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .rainha-do-dia .img-container {
+    flex-direction: column; 
+    align-items: center;
+  }
+
   .rainha-do-dia .foto-vivi {
-    width: 140px;
+    width: 140px; 
   }
 }
 
@@ -610,26 +621,6 @@ ul {
 
 
 /* Cards */
-/* Contêiner da seção e títulos */
-.ministry-cards-wrapper {
-  max-width: 100%;
-  padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  text-align: center;
-}
-
-/* Foto da Família */
-.ministry-cards-wrapper img {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
-}
-
-/* Cards */
 .ministry-cards-wrapper {
   max-width: 100%;
   padding: 2rem 1rem;
@@ -679,10 +670,11 @@ ul {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+  position: relative;
 }
 
 .ministry-cards .card:hover {
-  transform: none; 
+  transform: none;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
@@ -701,21 +693,38 @@ ul {
   margin: 1rem 0;
   font-style: normal;
   color: #333;
-  font-size: 1rem;
-  line-height: 1.6;
-  overflow-y: auto;
-  max-height: 160px;
-  padding-right: 4px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.90rem;
+  line-height: 1.4;
+  overflow-y: auto; 
+  max-height: 160px; 
+  padding-right: 8px;
   text-overflow: ellipsis;
+  font-weight: 300;
+  scrollbar-width: thin;
+  scrollbar-color: #4f7edc rgba(38, 20, 177, 0.1);
 }
 
-/* Nome da pessoa no card */
+/* Scrollbar */
+.ministry-cards .card p::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ministry-cards .card p::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.ministry-cards .card p::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 .ministry-cards .card span {
   font-weight: bold;
   display: block;
   margin-top: auto;
   color: #9f1239;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
 }
 
 .ministry-cards .card p:last-child {
