@@ -75,6 +75,7 @@ const slides = document.getElementById("slides");
 const totalSlides = slides.children.length;
 
 function updateSlide() {
+  slides.style.transition = "transform 0.5s ease-in-out"; 
   slides.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
@@ -92,15 +93,23 @@ setInterval(nextSlide, 5000);
 
 function createHearts() {
   const heartsContainer = document.getElementById("hearts");
-  const heart = document.createElement("div");
-  heart.className = "heart";
-  heart.innerText = "❤️";
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.animationDuration = Math.random() * 3 + 3 + "s";
-  heartsContainer.appendChild(heart);
-  setTimeout(() => heart.remove(), 6000);
+  
+  if (Math.random() > 0.5) {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerText = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    
+    heart.style.animationDuration = Math.random() * 6 + 6 + "s"; 
+    
+    heartsContainer.appendChild(heart);
+    
+    setTimeout(() => heart.remove(), 12000); 
+  }
 }
-setInterval(createHearts, 500);
+
+setInterval(createHearts, 1500); 
+
 
 const videoButtons = document.querySelectorAll(".video-buttons button");
 const videoPlayer = document.getElementById("video-player");

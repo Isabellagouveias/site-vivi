@@ -1,210 +1,385 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vivi ❤️‍🩹</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./assets/img/olhos.jpeg"
-      sizes="16x16"
-    />
-  </head>
 
-  <body>
-    <div class="princess-decorations">
-      <img src="./assets/img/moana.png" alt="Moana" class="princess moana" />
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vivi ❤️‍🩹</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="./assets/img/olhos.jpeg" sizes="16x16" />
+</head>
 
-    <section class="rainha-do-dia">
-      <img
-        src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3FjM29ucDFxNGo3d3ZveWF2dWN3cTNqem9qYWNoNHdvZWw5dG9kMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/chiLaouf8KefD7UpQh/giphy.gif"
-        alt="Coroa brilhando"
-        class="coroa-gif"
-      />
+<body>
+  <div class="princess-decorations">
+    <img src="./assets/img/moana.png" alt="Moana" class="princess moana" />
+  </div>
 
-      <h1>Vitória Rodrigues Castelo Branco</h1>
-      <p>Menina forte, cheia de vida, alegria e talento 💖</p>
+  <section class="rainha-do-dia">
+    <img
+      src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3FjM29ucDFxNGo3d3ZveWF2dWN3cTNqem9qYWNoNHdvZWw5dG9kMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/chiLaouf8KefD7UpQh/giphy.gif"
+      alt="Coroa brilhando" class="coroa-gif" />
 
-      <p>
-        Vitória é como um raio de sol em qualquer lugar que ela esteja,
-        <span class="highlight">iluminando</span> com sua
-        <span class="highlight">determinação</span> e
-        <span class="highlight">elegância</span>.
-      </p>
+    <img src="assets/img/vivi-crianca-2.jpeg" alt="Foto da Vivi criança" class="foto-vivi" />
+
+    <h1>Vitória Rodrigues Castelo Branco</h1>
+    <p>Menina forte, cheia de vida, alegria e talento 💖</p>
+
+    <p>
+      Vitória é como um raio de sol em qualquer lugar que ela esteja,
+      <span class="highlight">iluminando</span> com sua
+      <span class="highlight">determinação</span> e
+      <span class="highlight">elegância</span>.
+    </p>
+  </section>
+
+  <section class="sparkle-buttons">
+    <button onclick="mostrarElogioAleatorio()">Me define 💫</button>
+  </section>
+
+  <div id="toastArea" class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 9999"></div>
+
+  <div class="floating-hearts" id="hearts"></div>
+
+  <section>
+    <h2>Sobre a Vitória</h2>
+    <ul>
+      <li>
+        Nasceu na madrugada de 1º de maio de 2008 — um verdadeiro raio de luz
+        dando bom dia pro mundo
+      </li>
+      <li>
+        Chegou ao mundo no Hospital Materno Infantil e, desde então, é um
+        presente raro de Deus
+      </li>
+      <li>
+        Com só 17 anos, ela já carrega uma maturidade e um coração tão grandes
+        que parecem de outra vida
+      </li>
+      <li>
+        Hoje, Vitória brilha como modelo, domina a dança, acolhe como tia da salinha e líder de célula na escola, e
+        ainda arrasa sendo filha dedicada, irmã parceira, amiga de verdade e tantas outras versões incríveis de si
+        mesma.
+      </li>
+      <li>Ama dogs, e é MUITO fofa (quando quer)</li>
+      <li>
+        Tem sede de aprender: novas línguas, novas culturas, novas conexões
+      </li>
+      <li>Ama tudo que envolve arte: dança, teatro, música clássica</li>
+      <li>
+        Vitória é daquelas pessoas que sentem tudo com intensidade, amam sem
+        medida e cuidam com verdade
+      </li>
+      <li>
+        Ela não é só uma amiga — é irmã de alma, conselheira de plantão,
+        refúgio seguro e raio de luz em dias nublados
+      </li>
+    </ul>
+  </section>
+
+
+  <section>
+    <h2>Características marcantes</h2>
+    <ul>
+      <li>Filha amorosa, irmã presente, amiga leal</li>
+      <li>Trabalhadeira, dedicada em tudo que faz</li>
+      <li>Gentileza que se sente no olhar, sorriso que transmite paz</li>
+      <li>Engraçada na medida certa, forte além do que aparenta</li>
+      <li>Prestativa, atenciosa, com escuta que conforta</li>
+      <li>Mulher de fé, serva de Deus com o coração no altar</li>
+      <li>Beleza que vai da alma ao exterior, sem esforço</li>
+      <li>
+        Irradia autenticidade com seu estilo único e exala um perfume
+        acolhedor que é praticamente seu cartão-de-visita.
+      </li>
+      <li>Inteligente, resiliente, com alma de guerreira</li>
+      <li>Ícone da social battery: limitada, mas sempre marcante</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Coisas que ela ama</h2>
+    <ul>
+      <li>Ler até esquecer da hora</li>
+      <li>Dançar como quem ora com o corpo</li>
+      <li>Sair de casa, ver o mundo, viver</li>
+      <li>
+        Mergulhar em partidas de Free Fire, usando estratégia para garantir
+        vitórias épicas
+      </li>
+      <li>Conversar por horas (principalmente dando conselho)</li>
+      <li>Comer bem, dormir gostoso, rir alto</li>
+      <li>Ler a Bíblia e ir pra igreja — de corpo, alma e coração</li>
+      <li>Maquiar, organizar, cuidar — da casa, das pessoas, do mundo</li>
+      <li>Física é a matéria favorita (sim, ela brilha até nisso)</li>
+      <li>
+        Ama ter razão — nasceu com alma de comandante (liderança nata 😌)
+      </li>
+      <li class="highlight">Ser útil, servir, fazer a diferença</li>
+      <li class="highlight">Ser bailarina de Jesus ✨</li>
+    </ul>
+  </section>
+
+  <section class="favorite">
+    <h2>Favoritos</h2>
+    <ul>
+      <li><strong>Comidas salgadas:</strong> Camarão, Doritos, Churrasco e Pão de Alho</li>
+      <li><strong>Sobremesas:</strong> Torta, Chocolate, Cocada, Açaí, Churros, Snickers e Morango com Chocolate — pura
+        paixão 🍓🍫</li>
+      <li><strong>Cores:</strong> Preto, Azul Marinho e Vermelho Fechado</li>
+      <li><strong>Séries:</strong> Chicago Med, Vincenzo, Tudo Bem Não Ser Normal, Amigas pra Sempre, Spy x Family e
+        Friends</li>
+      <li><strong>Filmes:</strong> Bad Boys, Esposa de Mentirinha e Gente Grande</li>
+      <li><strong>Animações favoritas:</strong> Mulan e Moana</li>
+      <li><strong>Filme favorito da Disney:</strong> <em>A Princesa e o Sapo</em> 🍃👑</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Medos & Manias</h2>
+    <ul>
+      <li>Palhaços, bonecas bizarras e patos (sim, patos 👀)</li>
+      <li>Medo do escuro na infância</li>
+      <li>Dois caras em uma moto</li>
+      <li>Tem uma relação complexa com aranhas e filmes de terror: NÃO.</li>
+      <li>Mania de soltar “entendeu?” e “não me irrita não”</li>
+      <li>Faz biquinho pra foto como se fosse capa de revista</li>
+      <li>Não sabe falar “intuito” — e a gente ama esse charme 💘</li>
+      <li>
+        Manias de organização quase terapêuticas — do tipo “faxina resolve
+        tudo”
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Sonhos & Talentos</h2>
+    <ul>
+      <li>
+        Queria ter feito ginástica olímpica — e certamente teria arrasado
+      </li>
+      <li>Sonha em ser juíza e lutar pela justiça com empatia</li>
+      <li>Deseja ter um filho menino para viver aventuras juntos</li>
+      <li>Sonha com o apê dos sonhos: Residencial Opus Acqua 🏙️</li>
+      <li>Visualiza uma família linda, repleta de amor e prosperidade</li>
+      <li>Prepara um churros sensacional e até um miojo digno de chef</li>
+      <li>Canta como um anjo — voz que emociona quem ouve</li>
+      <li>Dança com a leveza e graça de uma bailarina de palco 🩰</li>
+      <li>
+        Apresenta trabalhos com clareza e confiança, conquistando qualquer
+        plateia
+      </li>
+      <li>
+        Decora conteúdos com facilidade — memorizando detalhes como ninguém
+      </li>
+      <li>
+        Ensina com paciência e dom, transformando aprendizado em inspiração
+      </li>
+      <li class="highlight">
+        Cuida das pessoas como se fosse missão de vida
+      </li>
+    </ul>
+  </section>
+
+  <section class="ministry-cards-wrapper">
+    <h2>Ministério</h2>
+    <section class="ministry-cards">
+
+      <div class="card">
+        <img src="assets/img/laura.jpeg" alt="Foto de Laura">
+        <p>Oi Vivi, hoje vim te dizer que te amo, dizer que me inspiro em você.
+          Desejo a você as coisas mais lindas dessa vida, e que nunca falte a presença do Papai do Céu na sua caminhada.
+          Quero te agradecer por tudo: por me ouvir, me ajudar, me aconselhar... Você é muito mais que uma amiga, é uma
+          irmã mais velha que sempre me apoia.
+          Nos meus momentos difíceis, você me ouviu (e ainda orou por mim!), e eu sou tão feliz por ter você aqui
+          pertinho de mim!
+          Tenho muito amor pela sua vida e amo estar ao seu lado.
+          Obrigada por tudo! Conte comigo, assim como eu contei com você. Estou aqui sempre, tá bom?
+          Beijinhos 🤍</p>
+        <span> Laurinha</span>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/aninha.jpeg" alt="Foto de Aninha">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt delectus, nisi cum placeat voluptatem quam
+          possimus fugit ex rem facilis accusantium nostrum quibusdam nam minima debitis incidunt. Voluptatum, tenetur
+          voluptatibus?</p>
+        <span> Aninha</span>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/mariana.jpeg" alt="Foto de Mariana">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt delectus, nisi cum placeat voluptatem quam
+          possimus fugit ex rem facilis accusantium nostrum quibusdam nam minima debitis incidunt. Voluptatum, tenetur
+          voluptatibus?</p>
+        <span> Mary</span>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/heloisa.jpeg" alt="Foto de Heloisa">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptate atque, asperiores labore ab
+          doloremque nam consequuntur blanditiis. Id possimus voluptatum, molestiae optio debitis amet totam. Unde
+          maiores sapiente dignissimos.</p>
+        <span> Helo</span>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/giovana.jpeg" alt="Foto de Giovana">
+        <p>Bom, Vivi, estou passando aqui para te desejar um feliz aniversário! Que Deus te abençoe grandemente.
+          Continue sendo essa menina dedicada, que transmite brilho e entrega em tudo o que faz.
+          Saiba que você é muito usada por Deus aqui entre nós.
+          Eu só tenho a te agradecer: por cada abraço, por todo carinho, por estar comigo em todas as minhas
+          tempestades. Obrigada por orar por mim quando nem eu tenho forças para isso.
+          Para ser sincera, você me transmite uma leveza e uma paz inacreditáveis. Espero, de coração, um dia poder
+          retribuir.
+          Você é incrível, uma pessoa preciosa na vida de cada um que te conhece!
+          Eu te amo, Vivi.
+          Que o seu dia seja incrível! 🎉🤍</p>
+        <span> Giovanna</span>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/vic.jpeg" alt="Foto de Viczinha">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptate atque, asperiores labore ab
+          doloremque nam consequuntur blanditiis. Id possimus voluptatum, molestiae optio debitis amet totam. Unde
+          maiores sapiente dignissimos.</p>
+        <span> Viczinha</span>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/vic.jpeg" alt="Foto de Viczinha">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptate atque, asperiores labore ab
+          doloremque nam consequuntur blanditiis. Id possimus voluptatum, molestiae optio debitis amet totam. Unde
+          maiores sapiente dignissimos.</p>
+        <span> Jujuba</span>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/isinha.png" alt="Foto de Isinha">
+        <p>
+          Conheci a Vivi em outubro de 2021 no nosso Ministério de Dança, e desde então ela se tornou não só minha
+          melhor amiga, mas um dos maiores presentes que Deus já me deu.
+          Vivi, você é espelho para mim: no amor que tem por Jesus, na dedicação absurda que coloca em tudo o que faz,
+          na excelência com que serve, na maneira como inspira todo mundo ao seu redor.
+          É lindo ver como você é usada por Deus — e eu, como sua fã número 1, me encho de orgulho toda vez que te vejo
+          dançando, orando, vivendo o propósito que o Senhor escreveu para você.
+          Que bênçãos infinitas alcancem sua vida! Que seus sonhos floresçam, e que sua luz nunca se apague.
+          Você é única, especial, minha amiga, minha irmã de alma, meu exemplo de fé, força e amor.
+          Te amo pra sempre! ❤️‍🩹
+        </p>
+        <span> Isinha ❤️‍🩹</span>
+      </div>
+
     </section>
-
-    <section class="sparkle-buttons">
-      <button onclick="mostrarElogioAleatorio()">Me define 💫</button>
-    </section>
-
-    <div
-      id="toastArea"
-      class="toast-container position-fixed bottom-0 end-0 p-3"
-      style="z-index: 9999"
-    ></div>
-
-    <div class="floating-hearts" id="hearts"></div>
-
-    <section>
-      <h2>Sobre a Vitória</h2>
-      <ul>
-        <li>
-          Nasceu na madrugada de 1º de maio de 2008 — um verdadeiro raio de luz
-          dando bom dia pro mundo
-        </li>
-        <li>
-          Chegou ao mundo no Hospital Materno Infantil e, desde então, é um
-          presente raro de Deus
-        </li>
-        <li>
-          Com só 17 anos, ela já carrega uma maturidade e um coração tão grandes
-          que parecem de outra vida
-        </li>
-        <li>
-          Hoje, Vitória brilha como modelo, domina a dança, acolhe como tia da salinha e líder de célula na escola, e ainda arrasa sendo filha dedicada, irmã parceira, amiga de verdade e tantas outras versões incríveis de si mesma.
-        </li>
-        <li>Ama dogs, e é MUITO fofa (quando quer)</li>
-        <li>
-          Tem sede de aprender: novas línguas, novas culturas, novas conexões
-        </li>
-        <li>Ama tudo que envolve arte: dança, teatro, música clássica</li>
-        <li>
-          Vitória é daquelas pessoas que sentem tudo com intensidade, amam sem
-          medida e cuidam com verdade
-        </li>
-        <li>
-          Ela não é só uma amiga — é irmã de alma, conselheira de plantão,
-          refúgio seguro e raio de luz em dias nublados
-        </li>
-      </ul>
-    </section>
+  </section>
 
 
-    <section>
-      <h2>Características marcantes</h2>
-      <ul>
-        <li>Filha amorosa, irmã presente, amiga leal</li>
-        <li>Trabalhadeira, dedicada em tudo que faz</li>
-        <li>Gentileza que se sente no olhar, sorriso que transmite paz</li>
-        <li>Engraçada na medida certa, forte além do que aparenta</li>
-        <li>Prestativa, atenciosa, com escuta que conforta</li>
-        <li>Mulher de fé, serva de Deus com o coração no altar</li>
-        <li>Beleza que vai da alma ao exterior, sem esforço</li>
-        <li>
-          Irradia autenticidade com seu estilo único e exala um perfume
-          acolhedor que é praticamente seu cartão-de-visita.
-        </li>
-        <li>Inteligente, resiliente, com alma de guerreira</li>
-        <li>Ícone da social battery: limitada, mas sempre marcante</li>
-      </ul>
-    </section>
 
-    <section>
-      <h2>Coisas que ela ama</h2>
-      <ul>
-        <li>Ler até esquecer da hora</li>
-        <li>Dançar como quem ora com o corpo</li>
-        <li>Sair de casa, ver o mundo, viver</li>
-        <li>
-          Mergulhar em partidas de Free Fire, usando estratégia para garantir
-          vitórias épicas
-        </li>
-        <li>Conversar por horas (principalmente dando conselho)</li>
-        <li>Comer bem, dormir gostoso, rir alto</li>
-        <li>Ler a Bíblia e ir pra igreja — de corpo, alma e coração</li>
-        <li>Maquiar, organizar, cuidar — da casa, das pessoas, do mundo</li>
-        <li>Física é a matéria favorita (sim, ela brilha até nisso)</li>
-        <li>
-          Ama ter razão — nasceu com alma de comandante (liderança nata 😌)
-        </li>
-        <li class="highlight">Ser útil, servir, fazer a diferença</li>
-        <li class="highlight">Ser bailarina de Jesus ✨</li>
-      </ul>
-    </section>
+  <section class="ministry-cards-wrapper">
+    <h2>Amigos e Família</h2>
     
-    <section class="favorite">
-      <h2>Favoritos</h2>
-      <ul>
-        <li><strong>Comidas salgadas:</strong> Camarão, Doritos, Churrasco e Pão de Alho</li>
-        <li><strong>Sobremesas:</strong> Torta, Chocolate, Cocada, Açaí, Churros, Snickers e Morango com Chocolate — pura paixão 🍓🍫</li>
-        <li><strong>Cores:</strong> Preto, Azul Marinho e Vermelho Fechado</li>
-        <li><strong>Séries:</strong> Chicago Med, Vincenzo, Tudo Bem Não Ser Normal, Amigas pra Sempre, Spy x Family e Friends</li>
-        <li><strong>Filmes:</strong> Bad Boys, Esposa de Mentirinha e Gente Grande</li>
-        <li><strong>Animações favoritas:</strong> Mulan e Moana</li>
-        <li><strong>Filme favorito da Disney:</strong> <em>A Princesa e o Sapo</em> 🍃👑</li>
-      </ul>
-    </section>
-    
-    
-    
-    
-    
+    <section class="ministry-cards">
 
-    <section>
-      <h2>Medos & Manias</h2>
-      <ul>
-        <li>Palhaços, bonecas bizarras e patos (sim, patos 👀)</li>
-        <li>Medo do escuro na infância</li>
-        <li>Dois caras em uma moto</li>
-        <li>Tem uma relação complexa com aranhas e filmes de terror: NÃO.</li>
-        <li>Mania de soltar “entendeu?” e “não me irrita não”</li>
-        <li>Faz biquinho pra foto como se fosse capa de revista</li>
-        <li>Não sabe falar “intuito” — e a gente ama esse charme 💘</li>
-        <li>
-          Manias de organização quase terapêuticas — do tipo “faxina resolve
-          tudo”
-        </li>
-      </ul>
+      <div class="card">
+        <img src="assets/img/maria.jpeg" alt="Foto de Lorena">
+        <p>A Vitória é mais do que uma amiga — ela é uma irmã que a vida me deu.
+          A gente já passou por tanta coisa juntas, e, em todos os momentos difíceis, ela esteve ao meu lado. Nunca
+          soltou minha mão, mesmo quando tudo parecia desabar.
+          E eu também estive com ela em cada batalha, cada lágrima, cada silêncio que dizia mais do que mil palavras.
+          A nossa amizade é daquelas raras, fortes, de verdade.
+          A Vitória tem uma alma linda, um coração enorme e uma força que inspira.
+          Está sempre disposta a ajudar, a ouvir, a aconselhar — e, quando ela acredita em você, parece que tudo fica
+          mais fácil.
+          A presença dela ilumina os dias mais difíceis e deixa os bons ainda melhores.
+          Mais do que amiga, ela é abrigo, é risada no momento certo, é abraço apertado e sincero.
+          Ter ela na minha vida é um privilégio que eu nunca vou deixar de agradecer. 💗</p>
+        <span> Maria</span>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/lorena.jpeg" alt="Foto de Lorena">
+        <p>Oi, filha do coração que a dança me presenteou! Que alegria celebrar mais um ano da sua vida... Felicidades
+          hoje e sempre!</p>
+        <span> Lore</span>
+      </div>
+
+
+      <div class="card">
+        <img src="assets/img/tia.jpeg" alt="Foto de Lorena">
+        <p>
+          Minha princesa, querida, adorável, encantadora, cativante, boa ouvinte, um dos nossos maiores tesouros e
+          menina dos olhos de Deus!
+          Uma joia que ama servir ao Senhor com a sua boca, seus olhos, ouvidos e com a sua dança.
+          Para mim, ser sua tia sempre foi uma experiência especial, mas eu não imaginava que poderia ser algo tão
+          divertido e tão cheio de amor.
+          Pegar você no colo pela primeira vez foi um momento que eu nunca vou esquecer.
+          Meu colo sempre estará aqui, disponível para você, não importa quanto tempo passe!
+          Sempre estarei aqui para proteger você como uma mãe, dar risadas como uma amiga e guardar seus segredos como
+          uma irmã.
+          Das bênçãos da minha vida, você e sua irmã são das maiores: presentes que Deus nos permitiu cuidar.
+
+          E não se esqueça: Papai do Céu te fez única.
+          Sinto muito orgulho de ver você se tornar uma menina forte, corajosa, bondosa, determinada e iluminada...
+          Que a cada dia você se transforme em uma mulher virtuosa, linda, generosa e ainda mais determinada.
+
+          Que bênção é ter você!
+
+          Eu te amo, sobrinha, minha filha do coração!
+        </p>
+        <span> Tia Chelle </span>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/mae.png" alt="Foto de Lorena">
+        <p>
+          Não tenho palavras para expressar minha gratidão a Deus por ter me presenteado.
+          Ser sua mãe é uma honra e um prazer.
+          Vivi, você é valente, valorosa e vitoriosa: uma pessoa determinada, sonhadora, metódica (como a mamãe, kkk),
+          dedicada, divertida e apaixonada pelo que faz.
+          Que Deus continue te fortalecendo e te capacitando para o propósito d'Ele nesta terra, e que, através da sua
+          vida, o Espírito Santo possa inspirar a muitos.
+
+          "O Senhor te abençoe e te guarde; o Senhor faça resplandecer o seu rosto sobre ti e te conceda graça;
+          o Senhor volte para ti o seu rosto e te dê paz."
+          Números 6:24-26
+
+          AMO-TE MUITO!
+          Parabéns pelo seu dia! Que chuvas de bênçãos alcancem a sua vida!
+        </p>
+        <span> Mãe </span>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/isinha-2.png" alt="Foto de Isinha">
+        <p>
+          Vivi, falar de você é falar de amor em forma de pessoa.
+          Desde que você entrou na minha vida, ela ganhou mais cor, mais sentido, mais fé.
+          Você não é apenas uma amiga, é minha irmã escolhida por Deus.
+          Vivi, sua força, sua alegria e sua fé iluminam quem tem o privilégio de caminhar ao seu lado.
+          Sua dedicação em tudo que faz, sua maneira de cuidar de todos, seu jeito único de transformar pequenos gestos
+          em grandes demonstrações de amor são marcas que te tornam inesquecível.
+          Mesmo sem perceber, você ensina todos os dias sobre coragem, sobre leveza e sobre entrega verdadeira.
+          Que você nunca se esqueça da força linda que carrega dentro de si, e que saiba: nos dias bons e nos difíceis,
+          eu estarei aqui — pra te apoiar, rir com você, chorar se for preciso, e sempre, sempre te lembrar do quão
+          maravilhosa você é.
+          Você é um presente raro, um sopro do céu. Que a vida te recompense infinitamente por todo o amor que você
+          espalha.
+          Te amo para sempre, minha Vivi. 🦦❤️‍🩹
+        </p>
+        <span> Isa ❤️‍🩹</span>
+      </div>
+
     </section>
 
-    <section>
-      <h2>Sonhos & Talentos</h2>
-      <ul>
-        <li>
-          Queria ter feito ginástica olímpica — e certamente teria arrasado
-        </li>
-        <li>Sonha em ser juíza e lutar pela justiça com empatia</li>
-        <li>Deseja ter um filho menino para viver aventuras juntos</li>
-        <li>Sonha com o apê dos sonhos: Residencial Opus Acqua 🏙️</li>
-        <li>Visualiza uma família linda, repleta de amor e prosperidade</li>
-        <li>Prepara um churros sensacional e até um miojo digno de chef</li>
-        <li>Canta como um anjo — voz que emociona quem ouve</li>
-        <li>Dança com a leveza e graça de uma bailarina de palco 🩰</li>
-        <li>
-          Apresenta trabalhos com clareza e confiança, conquistando qualquer
-          plateia
-        </li>
-        <li>
-          Decora conteúdos com facilidade — memorizando detalhes como ninguém
-        </li>
-        <li>
-          Ensina com paciência e dom, transformando aprendizado em inspiração
-        </li>
-        <li class="highlight">
-          Cuida das pessoas como se fosse missão de vida
-        </li>
-      </ul>
+    <img src="assets/img/familia.jpeg" alt="Foto da Família" class="img-fluid mb-4">
+
     </section>
 
 
@@ -227,9 +402,10 @@
     <!-- Playlist do Spotify diretamente na página -->
     <section>
       <h2>Músicas que marcaram nossa amizade</h2>
-    
+
       <p style="font-style: italic; margin-top: 10px;">
-        Essas músicas são como trilha sonora da nossa amizade. Algumas marcaram momentos incríveis, outras são as que sempre me lembram de você. 🎶"
+        Essas músicas são como trilha sonora da nossa amizade. Algumas marcaram momentos incríveis, outras são as que
+        sempre me lembram de você. 🎶
       </p>
 
       <div class="image-gallery">
@@ -237,15 +413,13 @@
         <img src="./assets/img/vivi-amora-2.jpg" alt="Vivi amora 2" />
         <img src="./assets/img/vivi-amora-3.jpg" alt="Vivi amora 3" />
       </div>
-    
-      <a
-        href="https://open.spotify.com/playlist/0YkLCBQfDsBeAyNlGVIGMu?si=470c32b158794903"
-        target="_blank"
-        class="spotify-button"
-      >
+
+      <a href="https://open.spotify.com/playlist/0YkLCBQfDsBeAyNlGVIGMu?si=470c32b158794903" target="_blank"
+        class="spotify-button">
         Nossa playlist ❤️‍🩹
       </a>
     </section>
+
 
     <div class="carousel">
       <div class="slides" id="slides">
@@ -366,94 +540,95 @@
         </div>
 
         <div class="slide">
-          <img src="./assets/img/irma.jpg" alt="Imagem irma" />
+          <img src="./assets/img/irma.jpg" alt="Imagem 39 - Irmã" />
         </div>
         <div class="slide">
-          <img src="./assets/img/irma-2.jpg" alt="Imagem irma" />
+          <img src="./assets/img/irma-2.jpg" alt="Imagem 40 - Irmã" />
         </div>
         <div class="slide">
-          <img src="./assets/img/irma-3.jpg" alt="Imagem irma" />
-        </div>
-
-        <div class="slide">
-          <img src="./assets/img/infancia.jpg" alt="Imagem infancia" />
-        </div>
-        <div class="slide">
-          <img src="./assets/img/infancia-2.jpg" alt="Imagem infancia" />
+          <img src="./assets/img/irma-3.jpg" alt="Imagem 41 - Irmã" />
         </div>
 
         <div class="slide">
-          <img src="./assets/img/best.jpg" alt="Imagem best jpg" />
+          <img src="./assets/img/infancia.jpg" alt="Imagem 42 - Infância" />
         </div>
         <div class="slide">
-          <img src="./assets/img/best-2.jpg" alt="Imagem best jpg" />
-        </div>
-        <div class="slide">
-          <img src="./assets/img/best-3.jpg" alt="Imagem best jpg" />
-        </div>
-        <div class="slide">
-          <img src="./assets/img/best-4.jpg" alt="Imagem best jpg" />
-        </div>
-        <div class="slide">
-          <img src="./assets/img/best-5.jpg" alt="Imagem best jpg" />
-        </div>
-        <div class="slide">
-          <img src="./assets/img/best-6.jpg" alt="Imagem best jpg" />
-        </div>
-        <div class="slide">
-          <img src="./assets/img/best-7.jpg" alt="Imagem best jpg" />
-        </div>
-        <div class="slide">
-          <img src="./assets/img/best-8.jpg" alt="Imagem best jpg" />
+          <img src="./assets/img/infancia-2.jpg" alt="Imagem 43 - Infância" />
         </div>
 
         <div class="slide">
-          <img src="./assets/img/best.jpeg" alt="Imagem best jpeg" />
+          <img src="./assets/img/best.jpg" alt="Imagem 44 - Best JPG" />
         </div>
         <div class="slide">
-          <img src="./assets/img/best-2.jpeg" alt="Imagem best jpeg" />
+          <img src="./assets/img/best-2.jpg" alt="Imagem 45 - Best JPG" />
         </div>
         <div class="slide">
-          <img src="./assets/img/best-3.jpeg" alt="Imagem best jpeg" />
+          <img src="./assets/img/best-3.jpg" alt="Imagem 46 - Best JPG" />
         </div>
         <div class="slide">
-          <img src="./assets/img/best-9.jpg" alt="Imagem best jpeg" />
+          <img src="./assets/img/best-4.jpg" alt="Imagem 47 - Best JPG" />
         </div>
         <div class="slide">
-          <img src="./assets/img/best-10.jpeg" alt="Imagem best jpeg" />
+          <img src="./assets/img/best-5.jpg" alt="Imagem 48 - Best JPG" />
         </div>
         <div class="slide">
-          <img src="./assets/img/best-11.jpeg" alt="Imagem best jpeg" />
+          <img src="./assets/img/best-6.jpg" alt="Imagem 49 - Best JPG" />
         </div>
         <div class="slide">
-          <img src="./assets/img/best-12.jpeg" alt="Imagem best jpeg" />
+          <img src="./assets/img/best-7.jpg" alt="Imagem 50 - Best JPG" />
         </div>
         <div class="slide">
-          <img src="./assets/img/best-13.jpeg" alt="Imagem best jpeg" />
+          <img src="./assets/img/best-8.jpg" alt="Imagem 51 - Best JPG" />
+        </div>
+
+        <div class="slide">
+          <img src="./assets/img/best.jpeg" alt="Imagem 52 - Best JPEG" />
         </div>
         <div class="slide">
-          <img src="./assets/img/best-14.jpeg" alt="Imagem best jpeg" />
+          <img src="./assets/img/best-2.jpeg" alt="Imagem 53 - Best JPEG" />
         </div>
         <div class="slide">
-          <img src="./assets/img/best-15.jpeg" alt="Imagem best jpeg" />
+          <img src="./assets/img/best-3.jpeg" alt="Imagem 54 - Best JPEG" />
         </div>
         <div class="slide">
-          <img src="./assets/img/best-16.jpeg" alt="Imagem best jpeg" />
+          <img src="./assets/img/best-9.jpg" alt="Imagem 55 - Best JPEG" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-10.jpeg" alt="Imagem 56 - Best JPEG" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-11.jpeg" alt="Imagem 57 - Best JPEG" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-12.jpeg" alt="Imagem 58 - Best JPEG" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-13.jpeg" alt="Imagem 59 - Best JPEG" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-14.jpeg" alt="Imagem 60 - Best JPEG" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-15.jpeg" alt="Imagem 61 - Best JPEG" />
+        </div>
+        <div class="slide">
+          <img src="./assets/img/best-16.jpeg" alt="Imagem 62 - Best JPEG" />
+        </div>
         </div>
       </div>
-    </div>
 
-    <div class="buttons">
-      <button onclick="prevSlide()" aria-label="Slide anterior">
-        <i class="ph ph-arrow-left"></i>
-      </button>
-      <button onclick="nextSlide()" aria-label="Próximo slide">
-        <i class="ph ph-arrow-right"></i>
-      </button>
-    </div>
+        <div class="buttons">
+          <button onclick="prevSlide()" aria-label="Slide anterior">
+            <i class="ph ph-arrow-left"></i>
+          </button>
+          <button onclick="nextSlide()" aria-label="Próximo slide">
+            <i class="ph ph-arrow-right"></i>
+          </button>
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  </body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="script.js"></script>
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</body>
+
 </html>

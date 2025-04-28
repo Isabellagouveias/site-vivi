@@ -14,8 +14,8 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 0;
-  pointer-events: none;
+  z-index: -1; 
+  pointer-events: none; 
 }
 
 .princess {
@@ -28,7 +28,16 @@ body {
   position: absolute;
   bottom: 0;
   left: 10px;
+  z-index: -1; 
 }
+
+/* Esconde a Moana em dispositivos móveis (celulares) com largura de tela até 480px */
+@media (max-width: 480px) {
+  .princess-decorations {
+    display: none; 
+  }
+}
+
 
 /* -----------------------------------------------
    Modal
@@ -95,6 +104,7 @@ body {
   border-radius: 24px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
   background-color: #000;
+  position: relative;
 }
 
 .slides {
@@ -116,6 +126,12 @@ body {
   max-width: 100%;
   object-fit: contain;
   border-radius: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slide img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* -----------------------------------------------
@@ -163,7 +179,6 @@ section {
 
 section:hover {
   background-color: rgba(255, 255, 255, 0.08);
-  transform: scale(1.04);
 }
 
 /* -----------------------------------------------
@@ -193,6 +208,22 @@ section.favorite {
   margin-top: 1rem;
 }
 
+.rainha-do-dia .foto-vivi {
+  width: 180px;
+  height: auto;
+  margin: 1rem auto 0.5rem auto;
+  display: block;
+  border-radius: 16px;
+  /* leve arredondado nas pontas */
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 600px) {
+  .rainha-do-dia .foto-vivi {
+    width: 140px;
+  }
+}
+
 /* -----------------------------------------------
    Buttons
 ----------------------------------------------- */
@@ -200,15 +231,31 @@ button {
   background-color: #9f1239;
   border: none;
   color: white;
-  padding: 0.8rem 1.6rem;
-  font-size: 1.2rem;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  padding: 1rem 2rem;
+  font-size: 1.4rem; 
+  border-radius: 50%; 
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
 button:hover {
   background-color: #7f0f33;
+  transform: scale(1.1); 
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(159, 18, 57, 0.7); 
+}
+
+button i {
+  font-size: 1.8rem; 
+  transition: transform 0.3s ease; 
+}
+
+button:hover i {
+  transform: translateX(5px); 
 }
 
 /* Sparkle Buttons */
@@ -248,7 +295,7 @@ button:hover {
   height: 100%;
   pointer-events: none;
   overflow: hidden;
-  z-index: 1;
+  z-index: -1; 
 }
 
 .heart {
@@ -257,6 +304,7 @@ button:hover {
   font-size: 2.4rem;
   animation: float 6s linear infinite;
 }
+
 
 /* -----------------------------------------------
    Highlight text
@@ -326,9 +374,11 @@ ul {
   0% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-16px);
   }
+
   100% {
     transform: translateY(0px);
   }
@@ -339,6 +389,7 @@ ul {
     transform: translateY(100vh) scale(1);
     opacity: 1;
   }
+
   100% {
     transform: translateY(-10vh) scale(0.5);
     opacity: 0;
@@ -350,6 +401,7 @@ ul {
     opacity: 0;
     transform: translateY(-24px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -360,6 +412,7 @@ ul {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -389,6 +442,7 @@ ul {
     height: 320px;
   }
 }
+
 .videos-por-ano {
   margin-top: 2rem;
   display: flex;
@@ -405,29 +459,28 @@ ul {
 }
 
 .video-buttons button {
-  background: #60a5fa; /* Azul mais claro */
+  background: #60a5fa;
   border-radius: 16px;
   font-weight: bold;
-  padding: 0.6rem 1.2rem; /* Menor padding */
-  font-size: 1.2rem; /* Texto menor */
+  padding: 0.6rem 1.2rem;
+  font-size: 1.2rem;
   color: #fff;
   border: 2px solid transparent;
   transition: all 0.3s ease;
   cursor: pointer;
-  box-shadow: none; /* Removido o box-shadow para um visual mais discreto */
-  white-space: nowrap; /* Evita que o texto quebre */
+  box-shadow: none;
+  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; /* Exibe reticências se o texto for muito longo */
 }
 
 .video-buttons button:hover {
-  background: #3b82f6; /* Azul mais intenso */
-  border-color: #2563eb; /* Azul escuro no hover */
-  transform: scale(1.05); /* Efeito de hover mais leve */
+  background: #3b82f6;
+  border-color: #2563eb;
+  transform: scale(1.05);
 }
 
 .video-buttons button:active {
-  transform: scale(1); /* Retorna ao tamanho original quando clicado */
+  transform: scale(1);
 }
 
 .video-container {
@@ -450,50 +503,51 @@ ul {
   .video-buttons {
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem; /* Maior espaço entre os botões em telas pequenas */
+    gap: 1.5rem;
   }
 
   .video-buttons button {
     width: 100%;
-    font-size: 1.4rem; /* Ajuste leve para o texto no mobile */
-    padding: 1rem 0; /* Ajuste para o padding no mobile */
-    white-space: normal; /* Permite quebra de linha, se necessário, no mobile */
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    white-space: normal;
   }
 
   .video-container {
     max-width: 100%;
     aspect-ratio: 16 / 9;
-    margin-top: 1rem; /* Pequeno espaço superior no mobile */
+    margin-top: 1rem;
   }
 }
-
-/* */
 
 /* Estilo para as imagens em linha */
 .image-gallery {
   display: flex;
-  justify-content: center; /* Centraliza as imagens */
-  gap: 1.2rem; /* Espaçamento entre as imagens */
+  justify-content: center;
+  gap: 1.2rem;
   margin-top: 1.6rem;
+  flex-wrap: wrap;
 }
 
 .image-gallery img {
-  width: 120px; /* Tamanho fixo para as imagens */
-  height: 120px; /* Tamanho fixo para as imagens */
-  object-fit: cover; /* Garante que as imagens sejam cortadas corretamente */
-  border-radius: 8px; /* Bordas arredondadas */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para dar um efeito visual */
-  transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
 .image-gallery img:hover {
-  transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+  transform: scale(1.1);
 }
+
+/* Playlist do Spotify */
 
 /* Estilo do link (botão) da playlist */
 .spotify-button {
   display: inline-block;
-  background-color: #1db954; /* Cor típica do Spotify */
+  background-color: #1db954;
   color: #fff;
   font-size: 1.4rem;
   padding: 1rem 2rem;
@@ -502,15 +556,168 @@ ul {
   text-align: center;
   font-weight: bold;
   margin-top: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
 .spotify-button:hover {
-  background-color: #1ed760; /* Cor mais clara do Spotify para hover */
-  transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+  background-color: #1ed760;
+  transform: scale(1.05);
 }
 
 .spotify-button:active {
-  transform: scale(1); /* Retorna ao tamanho original quando clicado */
+  transform: scale(1);
+}
+
+/* Responsividade para telas menores */
+
+@media (max-width: 768px) {
+  .image-gallery {
+    gap: 0.8rem;
+    justify-content: flex-start;
+  }
+
+  .image-gallery img {
+    width: 100px;
+    height: 100px;
+  }
+
+
+  .spotify-button {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.8rem;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-gallery {
+    gap: 0.6rem;
+    justify-content: center;
+  }
+
+  .image-gallery img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .spotify-button {
+    font-size: 1.1rem;
+    padding: 0.6rem 1.5rem;
+    margin-top: 1rem;
+  }
+}
+
+
+/* Cards */
+/* Contêiner da seção e títulos */
+.ministry-cards-wrapper {
+  max-width: 100%;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+/* Foto da Família */
+.ministry-cards-wrapper img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+/* Cards */
+.ministry-cards-wrapper {
+  max-width: 100%;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.ministry-cards-wrapper img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.ministry-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  max-width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .ministry-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ministry-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ministry-cards .card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1.5rem;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.ministry-cards .card:hover {
+  transform: none; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagens dentro dos cards */
+.ministry-cards .card img {
+  display: block;
+  margin: 0 auto 1rem auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Texto dos cards */
+.ministry-cards .card p {
+  margin: 1rem 0;
+  font-style: normal;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow-y: auto;
+  max-height: 160px;
+  padding-right: 4px;
+  text-overflow: ellipsis;
+}
+
+/* Nome da pessoa no card */
+.ministry-cards .card span {
+  font-weight: bold;
+  display: block;
+  margin-top: auto;
+  color: #9f1239;
+  font-size: 1.2rem;
+}
+
+.ministry-cards .card p:last-child {
+  margin-bottom: 0;
 }
