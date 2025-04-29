@@ -14,8 +14,8 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: -1; 
-  pointer-events: none; 
+  z-index: 1;
+  pointer-events: none;
 }
 
 .princess {
@@ -28,16 +28,61 @@ body {
   position: absolute;
   bottom: 0;
   left: 10px;
-  z-index: -1; 
+  z-index: 1;
 }
 
 /* Esconde a Moana em dispositivos móveis (celulares) com largura de tela até 480px */
 @media (max-width: 480px) {
   .princess-decorations {
-    display: none; 
+    display: none;
   }
 }
 
+/* -----------------------------------------------
+   Rainha do Dia
+----------------------------------------------- */
+.rainha-do-dia {
+  background: linear-gradient(135deg, #1e3a8a, #9f1239);
+  color: white;
+  padding: 1.6rem;
+  border-radius: 24px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+  margin-top: 2.4rem;
+  position: relative;
+  z-index: -1;
+}
+
+.rainha-do-dia .coroa-gif {
+  width: 80px;
+  margin-top: 1rem;
+}
+
+.rainha-do-dia .img-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.rainha-do-dia .foto-vivi {
+  width: 180px;
+  height: auto;
+  margin: 1rem;
+  display: block;
+  border-radius: 16px;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+  .rainha-do-dia .img-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rainha-do-dia .foto-vivi {
+    width: 140px;
+  }
+}
 
 /* -----------------------------------------------
    Modal
@@ -190,52 +235,6 @@ section.favorite {
 }
 
 /* -----------------------------------------------
-   Rainha do Dia
------------------------------------------------ */
-.rainha-do-dia {
-  background: linear-gradient(135deg, #1e3a8a, #9f1239);
-  color: white;
-  padding: 1.6rem;
-  border-radius: 24px;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
-  margin-top: 2.4rem;
-  position: relative;
-  z-index: 2;
-}
-
-.rainha-do-dia .coroa-gif {
-  width: 80px;
-  margin-top: 1rem;
-}
-
-.rainha-do-dia .img-container {
-  display: flex;
-  justify-content: center;
-  gap: 2rem; 
-  flex-wrap: wrap; 
-}
-
-.rainha-do-dia .foto-vivi {
-  width: 180px;
-  height: auto;
-  margin: 1rem;
-  display: block;
-  border-radius: 16px;
-}
-
-/* Responsivo para telas menores */
-@media (max-width: 768px) {
-  .rainha-do-dia .img-container {
-    flex-direction: column; 
-    align-items: center;
-  }
-
-  .rainha-do-dia .foto-vivi {
-    width: 140px; 
-  }
-}
-
-/* -----------------------------------------------
    Buttons
 ----------------------------------------------- */
 button {
@@ -243,30 +242,30 @@ button {
   border: none;
   color: white;
   padding: 1rem 2rem;
-  font-size: 1.4rem; 
-  border-radius: 50%; 
+  font-size: 1.4rem;
+  border-radius: 50%;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
   background-color: #7f0f33;
-  transform: scale(1.1); 
+  transform: scale(1.1);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 button:focus {
   outline: none;
-  box-shadow: 0 0 10px rgba(159, 18, 57, 0.7); 
+  box-shadow: 0 0 10px rgba(159, 18, 57, 0.7);
 }
 
 button i {
-  font-size: 1.8rem; 
-  transition: transform 0.3s ease; 
+  font-size: 1.8rem;
+  transition: transform 0.3s ease;
 }
 
 button:hover i {
-  transform: translateX(5px); 
+  transform: translateX(5px);
 }
 
 /* Sparkle Buttons */
@@ -306,7 +305,7 @@ button:hover i {
   height: 100%;
   pointer-events: none;
   overflow: hidden;
-  z-index: -1; 
+  z-index: -1;
 }
 
 .heart {
@@ -315,7 +314,6 @@ button:hover i {
   font-size: 2.4rem;
   animation: float 6s linear infinite;
 }
-
 
 /* -----------------------------------------------
    Highlight text
@@ -593,7 +591,6 @@ ul {
     height: 100px;
   }
 
-
   .spotify-button {
     font-size: 1.2rem;
     padding: 0.8rem 1.8rem;
@@ -619,7 +616,6 @@ ul {
   }
 }
 
-
 /* Cards */
 .ministry-cards-wrapper {
   max-width: 100%;
@@ -644,18 +640,6 @@ ul {
   gap: 2rem;
   justify-items: center;
   max-width: 100%;
-}
-
-@media (max-width: 1200px) {
-  .ministry-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .ministry-cards {
-    grid-template-columns: 1fr;
-  }
 }
 
 .ministry-cards .card {
@@ -693,11 +677,11 @@ ul {
   margin: 1rem 0;
   font-style: normal;
   color: #333;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 0.90rem;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.9rem;
   line-height: 1.4;
-  overflow-y: auto; 
-  max-height: 160px; 
+  overflow-y: auto;
+  max-height: 160px;
   padding-right: 8px;
   text-overflow: ellipsis;
   font-weight: 300;
@@ -724,9 +708,36 @@ ul {
   display: block;
   margin-top: auto;
   color: #9f1239;
-  font-size: 1.0rem;
+  font-size: 1rem;
 }
 
 .ministry-cards .card p:last-child {
   margin-bottom: 0;
+}
+
+@media (min-width: 1201px) {
+  .ministry-cards .center-last {
+    grid-column: 2 / span 2;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .ministry-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ministry-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .ministry-cards .card p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6; 
+  }
 }
