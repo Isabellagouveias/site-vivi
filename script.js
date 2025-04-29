@@ -1,46 +1,18 @@
 const elogios = [
-  "Linda 😍",
-  "Forte 💪",
-  "Inteligente 🤓",
-  "Dedicada 👩‍💻",
-  "Amada ❤️",
-  "Gentil 🤗",
-  "Sorridente 😊",
-  "Humilde 🙏",
-  "Honesta ✅",
-  "Talentosa 🎨",
-  "Brilhante ✨",
-  "Corajosa 🦸‍♀️",
-  "Generosa 🤝",
-  "Empática 🫂",
-  "Criativa 🎭",
-  "Carinhosa 💕",
-  "Inspiradora 🌟",
-  "Autêntica 💎",
-  "Amável 😌",
-  "Elegante 👗",
-  "Resiliente 🛡",
-  "Cheia de luz 🔆",
-  "Determinada 🏆",
-  "Fofa demais 🥰",
-  "Radiante 🌈",
-  "Magnífica 👑",
-  "Encantadora 🌹",
-  "Única 🎀",
-  "Estonteante ✨",
-  "Maravilhosa 💖",
-  "Maravilhosamente incrível 🤩",
-  "Incrível em tudo 😘",
-  "Pura energia positiva ☀️",
-  "Sempre brilhando 🌟",
+  "Linda 😍", "Forte 💪", "Inteligente 🤓", "Dedicada 👩‍💻", "Amada ❤️",
+  "Gentil 🤗", "Sorridente 😊", "Humilde 🙏", "Honesta ✅", "Talentosa 🎨",
+  "Brilhante ✨", "Corajosa 🦸‍♀️", "Generosa 🤝", "Empática 🫂", "Criativa 🎭",
+  "Carinhosa 💕", "Inspiradora 🌟", "Autêntica 💎", "Amável 😌", "Elegante 👗",
+  "Resiliente 🛡", "Cheia de luz 🔆", "Determinada 🏆", "Fofa demais 🥰",
+  "Radiante 🌈", "Magnífica 👑", "Encantadora 🌹", "Única 🎀", "Estonteante ✨",
+  "Maravilhosa 💖", "Maravilhosamente incrível 🤩", "Incrível em tudo 😘",
+  "Pura energia positiva ☀️", "Sempre brilhando 🌟",
 ];
 
 function mostrarElogioAleatorio() {
-  console.log("mostrarElogioAleatorio acionado");
   const mensagem = elogios[Math.floor(Math.random() * elogios.length)];
   const toastArea = document.getElementById("toastArea");
 
-  // Cria o elemento do Toast
   const toastElement = document.createElement("div");
   toastElement.className =
     "toast align-items-center text-white bg-pink border-0 fade show";
@@ -56,14 +28,11 @@ function mostrarElogioAleatorio() {
     </div>
   `;
 
-  // Adiciona o toast à área
   toastArea.appendChild(toastElement);
 
-  // Instancia e mostra o toast com o Bootstrap
   const toastBootstrap = new bootstrap.Toast(toastElement);
   toastBootstrap.show();
 
-  // Remove o toast após 8 segundos
   setTimeout(() => {
     toastBootstrap.hide();
     setTimeout(() => toastElement.remove(), 500);
@@ -89,27 +58,21 @@ function prevSlide() {
   updateSlide();
 }
 
-setInterval(nextSlide, 5000);
+setInterval(nextSlide, 6000);
 
 function createHearts() {
   const heartsContainer = document.getElementById("hearts");
-  
   if (Math.random() > 0.5) {
     const heart = document.createElement("div");
     heart.className = "heart";
     heart.innerText = "❤️";
     heart.style.left = Math.random() * 100 + "vw";
-    
-    heart.style.animationDuration = Math.random() * 6 + 6 + "s"; 
-    
+    heart.style.animationDuration = Math.random() * 6 + 6 + "s";
     heartsContainer.appendChild(heart);
-    
-    setTimeout(() => heart.remove(), 12000); 
+    setTimeout(() => heart.remove(), 12000);
   }
 }
-
-setInterval(createHearts, 1500); 
-
+setInterval(createHearts, 1500);
 
 const videoButtons = document.querySelectorAll(".video-buttons button");
 const videoPlayer = document.getElementById("video-player");
@@ -126,7 +89,6 @@ videoButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const year = button.getAttribute("data-year");
     const newSrc = videoMap[year];
-
     if (newSrc) {
       videoSource.setAttribute("src", newSrc);
       videoPlayer.load();

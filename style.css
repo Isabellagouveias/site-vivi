@@ -154,8 +154,8 @@ body {
 
 .slides {
   display: flex;
-  transition: transform 0.5s ease-in-out;
   height: 100%;
+  will-change: transform;
 }
 
 .slide {
@@ -556,7 +556,7 @@ ul {
 /* Estilo do link (botão) da playlist */
 .spotify-button {
   display: inline-block;
-  background-color: #1db954;
+  background-color: #8e313c;
   color: #fff;
   font-size: 1.4rem;
   padding: 1rem 2rem;
@@ -570,7 +570,7 @@ ul {
 }
 
 .spotify-button:hover {
-  background-color: #1ed760;
+  background-color: #9f1239;
   transform: scale(1.05);
 }
 
