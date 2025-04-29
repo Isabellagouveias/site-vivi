@@ -80,7 +80,8 @@ body {
   }
 
   .rainha-do-dia .foto-vivi {
-    width: 140px;
+    width: 90vw;
+    max-width: 240px;
   }
 }
 
@@ -738,6 +739,6 @@ ul {
   .ministry-cards .card p {
     color: #333;
     font-size: 1rem;
-    line-height: 1.6; 
+    line-height: 1.6;
   }
 }
