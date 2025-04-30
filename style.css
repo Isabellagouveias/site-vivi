@@ -86,58 +86,6 @@ body {
 }
 
 /* -----------------------------------------------
-   Modal
------------------------------------------------ */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(8px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
-  z-index: 10;
-}
-
-.modal.show {
-  visibility: visible;
-  opacity: 1;
-}
-
-.modal-content {
-  background: #fff;
-  border-radius: 12px;
-  padding: 48px 24px 24px 24px;
-  width: 90%;
-  max-width: 640px;
-  color: #000;
-  max-height: 80vh;
-  overflow-y: auto;
-  position: relative;
-}
-
-.close-modal {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: transparent;
-  border: none;
-  font-size: 32px;
-  cursor: pointer;
-  color: #333;
-}
-
-.close-modal:hover {
-  color: #fff;
-}
-
-/* -----------------------------------------------
    Slides (Carousel)
 ----------------------------------------------- */
 .carousel {
@@ -428,31 +376,6 @@ ul {
   }
 }
 
-/* -----------------------------------------------
-   Media Queries
------------------------------------------------ */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.4rem;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  p {
-    font-size: 1.2rem;
-  }
-
-  .carousel {
-    height: 320px;
-  }
-
-  .slide {
-    height: 320px;
-  }
-}
-
 .videos-por-ano {
   margin-top: 2rem;
   display: flex;
@@ -553,8 +476,6 @@ ul {
 }
 
 /* Playlist do Spotify */
-
-/* Estilo do link (botão) da playlist */
 .spotify-button {
   display: inline-block;
   background-color: #8e313c;
@@ -577,44 +498,6 @@ ul {
 
 .spotify-button:active {
   transform: scale(1);
-}
-
-/* Responsividade para telas menores */
-
-@media (max-width: 768px) {
-  .image-gallery {
-    gap: 0.8rem;
-    justify-content: flex-start;
-  }
-
-  .image-gallery img {
-    width: 100px;
-    height: 100px;
-  }
-
-  .spotify-button {
-    font-size: 1.2rem;
-    padding: 0.8rem 1.8rem;
-    margin-top: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .image-gallery {
-    gap: 0.6rem;
-    justify-content: center;
-  }
-
-  .image-gallery img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .spotify-button {
-    font-size: 1.1rem;
-    padding: 0.6rem 1.5rem;
-    margin-top: 1rem;
-  }
 }
 
 /* Cards */
@@ -714,6 +597,65 @@ ul {
 
 .ministry-cards .card p:last-child {
   margin-bottom: 0;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .carousel {
+    height: 320px;
+  }
+
+  .slide {
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-gallery {
+    gap: 0.8rem;
+    justify-content: flex-start;
+  }
+
+  .image-gallery img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .spotify-button {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.8rem;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-gallery {
+    gap: 0.6rem;
+    justify-content: center;
+  }
+
+  .image-gallery img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .spotify-button {
+    font-size: 1.1rem;
+    padding: 0.6rem 1.5rem;
+    margin-top: 1rem;
+  }
 }
 
 @media (min-width: 1201px) {

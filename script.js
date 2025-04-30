@@ -1,12 +1,38 @@
 const elogios = [
-  "Linda 😍", "Forte 💪", "Inteligente 🤓", "Dedicada 👩‍💻", "Amada ❤️",
-  "Gentil 🤗", "Sorridente 😊", "Humilde 🙏", "Honesta ✅", "Talentosa 🎨",
-  "Brilhante ✨", "Corajosa 🦸‍♀️", "Generosa 🤝", "Empática 🫂", "Criativa 🎭",
-  "Carinhosa 💕", "Inspiradora 🌟", "Autêntica 💎", "Amável 😌", "Elegante 👗",
-  "Resiliente 🛡", "Cheia de luz 🔆", "Determinada 🏆", "Fofa demais 🥰",
-  "Radiante 🌈", "Magnífica 👑", "Encantadora 🌹", "Única 🎀", "Estonteante ✨",
-  "Maravilhosa 💖", "Maravilhosamente incrível 🤩", "Incrível em tudo 😘",
-  "Pura energia positiva ☀️", "Sempre brilhando 🌟",
+  "Linda 😍",
+  "Forte 💪",
+  "Inteligente 🤓",
+  "Dedicada 👩‍💻",
+  "Amada ❤️",
+  "Gentil 🤗",
+  "Sorridente 😊",
+  "Humilde 🙏",
+  "Honesta ✅",
+  "Talentosa 🎨",
+  "Brilhante ✨",
+  "Corajosa 🦸‍♀️",
+  "Generosa 🤝",
+  "Empática 🫂",
+  "Criativa 🎭",
+  "Carinhosa 💕",
+  "Inspiradora 🌟",
+  "Autêntica 💎",
+  "Amável 😌",
+  "Elegante 👗",
+  "Resiliente 🛡",
+  "Cheia de luz 🔆",
+  "Determinada 🏆",
+  "Fofa demais 🥰",
+  "Radiante 🌈",
+  "Magnífica 👑",
+  "Encantadora 🌹",
+  "Única 🎀",
+  "Estonteante ✨",
+  "Maravilhosa 💖",
+  "Maravilhosamente incrível 🤩",
+  "Incrível em tudo 😘",
+  "Pura energia positiva ☀️",
+  "Sempre brilhando 🌟",
 ];
 
 function mostrarElogioAleatorio() {
@@ -44,7 +70,7 @@ const slides = document.getElementById("slides");
 const totalSlides = slides.children.length;
 
 function updateSlide() {
-  slides.style.transition = "transform 0.5s ease-in-out"; 
+  slides.style.transition = "transform 0.5s ease-in-out";
   slides.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
