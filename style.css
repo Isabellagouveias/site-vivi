@@ -104,7 +104,7 @@ body {
 .slides {
   display: flex;
   height: 100%;
-  will-change: transform;
+  transition: transform 0.5s ease-in-out;  
 }
 
 .slide {
@@ -118,7 +118,7 @@ body {
 .slide img {
   max-height: 100%;
   max-width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 24px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -456,7 +456,7 @@ ul {
 /* Estilo para as imagens em linha */
 .image-gallery {
   display: flex;
-  justify-content: center;
+  justify-content: center;  
   gap: 1.2rem;
   margin-top: 1.6rem;
   flex-wrap: wrap;
@@ -625,7 +625,7 @@ ul {
 @media (max-width: 768px) {
   .image-gallery {
     gap: 0.8rem;
-    justify-content: flex-start;
+    justify-content: center;  
   }
 
   .image-gallery img {
